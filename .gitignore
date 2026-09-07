@@ -1,0 +1,55 @@
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+secrets/
+.credentials/
+
+# Generated media and large working assets
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.aiff
+*.psd
+*.aep
+*.prproj
+*.zip
+*.tar
+*.tar.gz
+
+# Render / generation working directories
+generated/
+renders/
+exports/
+tmp/
+temp/
+cache/
+.cache/
+.local/
+
+# Common tool caches
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
