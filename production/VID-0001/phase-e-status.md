@@ -4,43 +4,37 @@
 **Story:** STORY-0001  
 **Working title:** The Flooded Box
 
-- [x] Stage 15 — Remotion Composition & Assembly
-  - [x] 750-frame edit manifest created
-  - [x] all 7 approved image assets mapped
-  - [x] Stage-11 motion treatments mapped
-  - [x] CAP-01 mapped
-  - [x] AUD-01 through AUD-07 mapped
-  - [x] source-offset support added
-  - [x] volume-envelope support added
-  - [x] deterministic Foley materialization verified
-  - [x] candidate #1 rendered
-  - [x] H.264 1080×1920 / 30fps verified
-  - [x] AAC audio stream verified
-  - [x] candidate artifact preserved
+- [~] Stage 15 — Remotion Composition & Assembly
+  - [x] Candidate #1 rendered technically
+  - [x] 1080×1920 / 30fps / AAC verified
+  - [x] artifact preserved
+  - [x] human review completed
+  - [x] Candidate #1 REJECTED
+  - [ ] Candidate #2 edit architecture rebuilt
+  - [ ] Candidate #2 rendered
+  - [ ] Candidate #2 human-accepted
 - [ ] Stage 16 — Render Validation
 
-## Stage 15 result
+## Candidate #1 result
 
-**COMPLETE**
+**REJECTED by human review on 2026-09-09.**
 
-Candidate:
-`VID-0001-stage15-candidate-1`
+The candidate is technically valid but editorially unacceptable.
 
-Probe:
-- H.264
-- 1080×1920
-- 30 fps
-- AAC audio
-- 25.045333 seconds
-- 20,372,393 bytes
+Primary failures:
+- feels like a basic slideshow rather than a cinematic micro-drama
+- only seven source stills across ~25 seconds create long static holds
+- narration ends after the opening hook, leaving most of the story without spoken narrative progression
+- only one opening caption is present
+- motion is mostly restrained zoom/pan and does not create enough visual progression
+- transitions are nearly all hard cuts with no designed editorial rhythm
+- sound design is present but cannot compensate for weak story progression/editing
+- emotional payoff is under-explained and under-shaped
 
-MP4 SHA-256:
-`aa3550a9a82d6ebc2bb82378b4c7cf7fd7b145439be11beaf96e2efd754daef2`
+Do not advance Candidate #1 to Stage 16 or QC.
 
-## Rule
+## Required next step
 
-No AI video source is used. Remotion constructs the complete video from approved still images plus approved audio.
+**Rebuild Stage 15 as Candidate #2.**
 
-## Next
-
-**Stage 16 — Render Validation**
+Candidate #2 must use a denser still-image edit, continuous narrative structure, dynamic captions, stronger sound/edit sync, and purposeful Remotion transitions/motion while preserving the no-AI-video rule.
