@@ -3,8 +3,8 @@
 **Date:** 2026-09-09  
 **Target duration:** 20–45 seconds  
 **Target platforms:** YouTube Shorts, Instagram Reels  
-**Status:** Awaiting human concept selection  
-**Next video ID after selection:** VID-0001  
+**Status:** Human selection complete — C02 selected as VID-0001 / STORY-0001  
+**Assigned active IDs:** VID-0001 / STORY-0001  
 
 This is the first active concept batch after the 2026-09-09 production reset. It follows `skills/idea-discovery/SKILL.md` and deliberately avoids directly reusing the dramatic engines preserved in the pre-reset archive.
 
