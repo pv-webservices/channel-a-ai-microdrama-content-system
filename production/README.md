@@ -6,7 +6,7 @@ Canonical artifact areas:
 - storyboards/
 - characters/
 - visual-prompts/
-- video-prompts/
+- remotion-motion-plans/
 - voiceovers/
 - sound-design/
 - captions/
@@ -14,11 +14,12 @@ Canonical artifact areas:
 - published/
 - examples/
 
-## Active production namespace
+The legacy `video-prompts/` area is retired and must not receive active production artifacts.
 
+## Active production namespace
 Active production numbering was reset on 2026-09-09.
 
-The next selected production starts at:
+The active sequence starts at:
 
 ```text
 VID-0001
@@ -29,13 +30,17 @@ Pre-reset work is stored under `archive/pre-reset-2026-09-09/` and is reference-
 
 For traceability, keep each active VID-#### chain together when practical.
 
-## Remotion handoff
-Once source assets are approved, the video must also have:
-- remotion-plan.md
-- render-validation.md for each candidate that reaches the gate
-- a matching remotion/data/VID-####.json (or equivalent typed props)
+## Visual-source rule
+Generated production visuals are still images/graphics only. AI video-generation models and generated source-video assets are prohibited.
 
-Generated binary media belongs under public/assets/VID-#### during local composition and renders/ for rendered candidates. Binary media and renders are ignored by Git by default; production documents should reference stable Asset IDs so files can be restored/recreated.
+## Remotion handoff
+Once still-image source assets are approved, the video must also have:
+- remotion-motion-plan.md from Stage 11
+- remotion-plan.md from Stage 15
+- render-validation.md for each candidate that reaches the gate
+- a matching `remotion/data/VID-####.json` (or equivalent typed props)
+
+Generated still-image/graphic media belongs under `public/assets/VID-####/` during local composition and `renders/` for rendered candidates. Binary media and renders are ignored by Git by default; production documents should reference stable Asset IDs so files can be restored/recreated.
 
 ## Source of truth
-Story documents remain authoritative for narrative intent. The Remotion manifest is authoritative for the exact candidate-edit timing. Any meaningful timing change must be documented so storyboard, composition plan and render remain traceable.
+Story documents remain authoritative for narrative intent. The Stage-11 motion plan defines intended still-image motion. The Remotion manifest is authoritative for the exact candidate-edit timing. Any meaningful timing change must be documented so storyboard, motion plan, composition plan and render remain traceable.

@@ -17,7 +17,7 @@
 - 25.0-second / 750-frame timing plan
 - 4 reference-image prompts
 - 7 scene keyframe prompts
-- 7 motion/video prompts
+- 7 Remotion motion specifications
 
 ## Phase D entry rule
 
@@ -31,13 +31,16 @@ Visual generation must not silently alter:
 - story payoff
 - approved timing intent
 
-Visual assets should be accepted/rejected against the validation checklists in `image-prompts.md` and `video-prompts.md`.
+Visual assets should be accepted/rejected against the validation checklists in `image-prompts.md` and `remotion-motion-plan.md`.
 
 ## Required next action
 
 Begin Stage 12 — Visual Asset Production.
 
-For image assets, the user's required route is:
-**Magnific MCP → Google Nano Banana 2.0 → 1K → unlimited generation.**
+For image assets, the current user-approved Stage 12 policy is:
 
-If that route cannot be used, stop and ask the user.
+**Magnific MCP, credit-based generation**
+1. Google Nano Banana 2 Lite — first priority for reference/simple/iteration frames.
+2. Google Nano Banana 2 — use for complex generations or when Lite does not meet continuity/anatomy requirements.
+
+Use 9:16. Use 1K explicitly where the selected model exposes a resolution selector. Do not substitute another image model without approval.

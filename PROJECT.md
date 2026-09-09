@@ -1,12 +1,14 @@
 # Project Source of Truth
 
 ## Mission
-Build a scalable AI-first short-form storytelling system capable of repeatedly producing original, emotionally engaging and visually distinctive micro-dramas, with Remotion providing a deterministic editing/rendering layer after source assets are approved.
+Build a scalable AI-first short-form storytelling system capable of repeatedly producing original, emotionally engaging and visually distinctive micro-dramas.
+
+**Channel-A visual-production rule:** AI generation is used for still images/graphics only. AI video-generation models are prohibited. Remotion is the deterministic motion-design, editing and rendering layer that turns approved images into the finished video.
 
 ## Active production reset
 At the user's direction, active production numbering was reset on **2026-09-09**.
 
-The new active sequence begins:
+The active sequence begins:
 
 ```text
 VID-0001
@@ -16,27 +18,28 @@ STORY-0001
 Earlier development/test artifacts are preserved under `archive/pre-reset-2026-09-09/`. They are historical references only, do not reserve active IDs, and cannot satisfy current production approval/QC/publishing gates.
 
 ## Product definition
-The output is fictional short-form cinematic storytelling designed primarily for YouTube Shorts and Instagram Reels. The project does not depend on human actors, cameras, physical locations, or manual filming.
+The output is fictional short-form cinematic storytelling designed primarily for YouTube Shorts and Instagram Reels. The project does not depend on human actors, cameras, physical locations, manual filming, or AI-generated video clips.
 
 The system should favor:
 - visible action over explanation,
 - coherent character motivation,
 - emotional clarity,
 - meaningful variation,
-- controlled cinematic visuals,
+- controlled cinematic still imagery,
 - retention-aware pacing,
-- provider independence,
-- deterministic editing,
+- provider independence for image generation,
+- deterministic Remotion motion/editing,
 - human quality review.
 
 It should reject quote-video thinking, shallow moral lectures, repetitive content-farm structures, fake real-person events, and effects-heavy editing that does not serve the story.
 
 ## Current scope
-**Phase 1 — Manual Validation with Remotion-assisted post-production.**
+**Phase 1 — Manual Validation with Remotion-based video construction.**
 
 In scope:
 - reusable Skills and templates,
-- manual/semi-assisted editorial and asset generation,
+- manual/semi-assisted editorial work,
+- AI still-image generation,
 - typed Remotion composition/rendering,
 - manifest validation and CI safety checks,
 - explicit Render Validation and editorial QC gates,
@@ -45,6 +48,8 @@ In scope:
 - version-controlled learnings.
 
 Out of scope:
+- AI video-generation models,
+- generated source-video assets,
 - autonomous idea-to-publish execution,
 - automated publishing,
 - automated Skill mutation,
@@ -93,11 +98,13 @@ When real channel data exists, track:
 8. Remotion motion must serve attention, emotion, or comprehension.
 9. Scene/Asset/Caption/Audio IDs and frame timing must remain traceable.
 10. Editorial cut intent and visual transition effects are separate concepts.
-11. Generated source-video audio is muted unless explicitly approved.
-12. Render Validation is technical; Quality Control is editorial.
-13. Human approval is a control gate.
-14. Analytics require sample discipline.
-15. Core storytelling remains provider-independent.
+11. AI video-generation models are prohibited for active Channel-A productions.
+12. Active visual sources are images or graphics only; video motion is created in Remotion.
+13. If one still cannot communicate a temporal beat, generate another approved still rather than a video clip.
+14. Render Validation is technical; Quality Control is editorial.
+15. Human approval is a control gate.
+16. Analytics require sample discipline.
+17. Core storytelling remains provider-independent.
 
 ## Standard stage contract
 
@@ -117,8 +124,10 @@ Canonical stage definitions live in `workflows/content-production.md`.
 
 ## Remotion governance
 - Storyboard timing is the editorial plan.
+- Stage 11 defines executable still-image motion intent.
 - The Remotion composition plan is the exact edit specification for a candidate render.
 - `cutIntent` records editorial reasoning; `entryTransition` records executable visual transition behavior.
+- Active visual Asset IDs map only to images/graphics.
 - Approved Asset IDs must map to source paths before a production-ready render.
 - Manifest structure must pass `npm run validate:manifests`.
 - Candidate renders must pass Render Validation before final Quality Control.
@@ -143,16 +152,16 @@ Direct JavaScript dependencies are pinned exactly and `package-lock.json` is com
 Validate repeatable storytelling and editing patterns across roughly 20–50 videos before major automation decisions. Human approval remains mandatory.
 
 ### Phase 2 — Assisted Production
-Automate scaffolding, artifact validation, prompt compilation, manifest preparation, render preparation, and draft metadata while humans retain concept/script/final approval.
+Automate scaffolding, artifact validation, image-prompt compilation, manifest preparation, render preparation, and draft metadata while humans retain concept/script/final approval.
 
 ### Phase 3 — Production Automation
-Potentially automate generation orchestration, file handling, Remotion manifest compilation, programmatic rendering, metadata preparation, and analytics collection. Final human approval remains required.
+Potentially automate image-generation orchestration, file handling, Remotion manifest compilation, programmatic rendering, metadata preparation, and analytics collection. Do not introduce AI video-generation models. Final human approval remains required.
 
 ### Phase 4 — Performance Feedback
 Use sufficient historical analytics to recommend changes to hooks, stories, lengths, pacing, visual styles, Remotion edit patterns, and content pillars. Skill changes remain version-controlled.
 
 ## Skills
-Core Skills include idea-discovery, concept-scorer, hook-writer, microdrama-writer, retention-optimizer, character-consistency, storyboard-generator, image-prompt-generator, video-prompt-generator, voiceover-writer, sound-design-planner, first-frame-optimizer, caption-title-generator, remotion-composer, render-validator, and quality-control.
+Core Skills include idea-discovery, concept-scorer, hook-writer, microdrama-writer, retention-optimizer, character-consistency, storyboard-generator, image-prompt-generator, remotion-scene-planner, voiceover-writer, sound-design-planner, first-frame-optimizer, caption-title-generator, remotion-composer, render-validator, and quality-control.
 
 ## Governance
 Authoritative policy files remain under `docs/`. When convenience prompts conflict with a Skill or policy document, the Skill/policy wins.

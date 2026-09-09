@@ -6,7 +6,7 @@ const videoArg = [...args].find((arg) => arg.startsWith('--video='));
 const requestedVideo = videoArg ? videoArg.slice('--video='.length) : null;
 const requireAssets = args.has('--require-assets');
 
-const allowedAssetKinds = new Set(['image', 'video', 'graphic', 'none']);
+const allowedAssetKinds = new Set(['image', 'graphic', 'none']);
 const allowedMotion = new Set(['static', 'slow-push-in', 'slow-pull-out', 'pan-left', 'pan-right', 'reaction-hold', 'custom']);
 const allowedEntryTransitions = new Set(['cut', 'fade']);
 const allowedCaptionPositions = new Set(['top', 'middle', 'bottom']);
@@ -56,7 +56,7 @@ for (const file of files) {
     assertPositiveInt(scene.durationInFrames, `${file}/${scene.id}: durationInFrames`);
     if (scene.startFrame !== expectedStart) fail(`${file}/${scene.id}: expected startFrame ${expectedStart}, got ${scene.startFrame}. Scene timelines must be contiguous.`);
     expectedStart = scene.startFrame + scene.durationInFrames;
-    if (!allowedAssetKinds.has(scene.assetKind)) fail(`${file}/${scene.id}: unsupported assetKind ${scene.assetKind}.`);
+    if (!allowedAssetKinds.has(scene.assetKind)) fail(`${file}/${scene.id}: unsupported assetKind ${scene.assetKind}. Active Channel-A visuals must be image/graphic/none; video assets are prohibited.`);
     if (!allowedMotion.has(scene.motionPreset)) fail(`${file}/${scene.id}: unsupported motionPreset ${scene.motionPreset}.`);
     if (scene.entryTransition && !allowedEntryTransitions.has(scene.entryTransition)) fail(`${file}/${scene.id}: unsupported entryTransition ${scene.entryTransition}.`);
     if (scene.transitionInFrames !== undefined) assertPositiveInt(scene.transitionInFrames, `${file}/${scene.id}: transitionInFrames`);

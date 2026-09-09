@@ -17,14 +17,14 @@
   - 4 continuity/reference prompts
   - 7 scene keyframe prompts
   - cross-frame validation
-- [x] Stage 11 — Video Prompt Generation
-  - 7 scene motion prompts
-  - start/end states
-  - temporal motion progression
-  - camera/subject/object motion separated
-  - negative motion constraints
-  - transition handoffs
-  - motion-continuity validation
+- [x] Stage 11 — Remotion Motion Planning
+  - 7 scene Remotion motion specifications
+  - scene/frame motion intent
+  - still-image transform progression
+  - executable still-image motion defined
+  - crop/continuity constraints
+  - cut/transition handoffs
+  - Remotion motion validation
 
 ## Phase C status
 
@@ -36,7 +36,7 @@
 - Character authority: `characters.md`
 - Scene/timing/geography authority: `storyboard.md`
 - Still-image prompt authority: `image-prompts.md`
-- Motion prompt authority: `video-prompts.md`
+- Remotion motion authority: `remotion-motion-plan.md`
 
 ## Handoff to Phase D
 
@@ -45,14 +45,16 @@ Proceed to:
 13. Voiceover Production
 14. Sound Design Production
 
-## Image generation provider constraint
+## Image generation provider policy — updated 2026-09-09
 
-When images are actually generated in Stage 12, use only:
-- Magnific MCP
-- Google Nano Banana 2.0
-- 1K resolution
-- unlimited-generation option
+Stage 12 image generation is authorized as **credit-based** through Magnific MCP.
 
-If that exact image-generation route is unavailable or errors, stop and ask the user instead of substituting another image model.
+Model priority:
+1. Google Nano Banana 2 Lite for references, simple frames, iteration and lower-cost generation.
+2. Google Nano Banana 2 for complex generations only, especially difficult hand/object interaction, multi-character continuity, or a failed Lite result.
 
-Video-generation provider is not locked by this document; video prompts remain provider-neutral unless the user specifies a video model/provider.
+Use 9:16 for production frames. Use 1K explicitly whenever the selected model exposes a resolution selector. Nano Banana 2 Lite does not expose a selectable resolution in the current Magnific catalog, so use its model-default output rather than silently switching models solely for resolution control.
+
+Do not use other image models without user approval.
+
+AI video generation is prohibited. Stage 12 produces image/graphic assets only; all video construction occurs in Remotion.

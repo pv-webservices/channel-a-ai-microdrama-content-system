@@ -3,7 +3,6 @@ import {
   AbsoluteFill,
   Audio,
   Img,
-  OffthreadVideo,
   Sequence,
   interpolate,
   staticFile,
@@ -79,11 +78,7 @@ const SceneLayer: React.FC<{scene: SceneSpec}> = ({scene}) => {
     );
   }
 
-  if (scene.assetKind === 'image' || scene.assetKind === 'graphic') {
-    return <Img src={resolveSource(scene.assetPath)} style={mediaStyle} />;
-  }
-
-  return <OffthreadVideo src={resolveSource(scene.assetPath)} style={mediaStyle} muted />;
+  return <Img src={resolveSource(scene.assetPath)} style={mediaStyle} />;
 };
 
 const captionContainerStyle = (position: CaptionCue['position']): React.CSSProperties => {

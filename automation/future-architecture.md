@@ -9,7 +9,8 @@ Trend Discovery
 → Retention Review
 → HUMAN CONCEPT / SCRIPT APPROVAL
 → Storyboard + Character Plan
-→ Visual Generation
+→ Image Generation
+→ Remotion Motion Planning
 → Voice Generation
 → Sound Generation
 → Remotion Composition Manifest
@@ -23,9 +24,9 @@ Trend Discovery
 
 ## Possible future technologies
 - LLM APIs
-- AI image/video APIs
+- AI image APIs
 - speech generation APIs
-- Remotion for deterministic composition and rendering
+- Remotion for deterministic motion, composition and rendering
 - FFmpeg for media inspection/transcoding where useful
 - YouTube API
 - Meta/Instagram publishing APIs
@@ -34,11 +35,12 @@ Trend Discovery
 - workflow orchestration
 
 ## Architecture rules
-- Keep generation providers behind capability adapters.
+- Keep image-generation providers behind capability adapters.
+- **Do not introduce AI video-generation providers.**
 - Treat Remotion composition manifests as deterministic edit specifications.
 - Store secrets outside Git.
 - Trace runs to input artifacts, Asset IDs and Skill versions.
 - Keep approval gates explicit.
-- Separate generation, rendering and publishing permissions.
+- Separate image generation, rendering and publishing permissions.
 - Make retries idempotent where practical.
 - Never let analytics silently rewrite Skills.
