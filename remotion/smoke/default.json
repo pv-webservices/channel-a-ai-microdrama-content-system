@@ -1,0 +1,25 @@
+{
+  "videoId": "SYSTEM-SMOKE",
+  "title": "Remotion System Smoke Test",
+  "subtitle": "Repository validation only",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "durationInFrames": 30,
+  "scenes": [
+    {
+      "id": "SC-01",
+      "beat": "Remotion composition smoke test",
+      "startFrame": 0,
+      "durationInFrames": 30,
+      "assetId": "AST-SMOKE-SC01",
+      "assetKind": "none",
+      "motionPreset": "static",
+      "cutIntent": "system-check",
+      "entryTransition": "cut",
+      "captionExclusion": "none"
+    }
+  ],
+  "captions": [],
+  "audioCues": []
+}

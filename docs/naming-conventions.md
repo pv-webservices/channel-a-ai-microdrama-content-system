@@ -1,5 +1,18 @@
 # Naming Conventions
 
+## Active production ID reset
+
+The active production namespace was reset on **2026-09-09** at the user's direction.
+
+Active production now starts fresh at:
+
+- Video: VID-0001
+- Story: STORY-0001
+
+Artifacts created before the reset are preserved under `archive/pre-reset-2026-09-09/` and do **not** reserve IDs in the active namespace.
+
+After this reset, active IDs are stable and must not be recycled for unrelated active productions.
+
 ## IDs
 - Video: VID-0001, VID-0002
 - Story: STORY-0001, STORY-0002
@@ -10,8 +23,6 @@
 - Caption cue: CAP-01, CAP-02
 - Audio cue: AUD-01, AUD-02
 - Learning: LRN-001, LRN-002
-
-IDs are stable. Do not recycle deleted IDs for unrelated content.
 
 ## Video project directory
 VID-0001/

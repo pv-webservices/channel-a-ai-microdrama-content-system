@@ -14,6 +14,19 @@ Canonical artifact areas:
 - published/
 - examples/
 
+## Active production namespace
+
+Active production numbering was reset on 2026-09-09.
+
+The next selected production starts at:
+
+```text
+VID-0001
+STORY-0001
+```
+
+Pre-reset work is stored under `archive/pre-reset-2026-09-09/` and is reference-only. Archived IDs do not consume active IDs and cannot satisfy current approval, Render Validation, QC, analytics, or publishing gates.
+
 For traceability, keep each active VID-#### chain together when practical.
 
 ## Remotion handoff

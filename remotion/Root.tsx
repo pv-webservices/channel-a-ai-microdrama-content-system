@@ -1,10 +1,10 @@
 import React from 'react';
 import {Composition, type CalculateMetadataFunction} from 'remotion';
-import vid0001 from './data/VID-0001.json';
+import smokeProps from './smoke/default.json';
 import {MicroDramaShort} from './compositions/MicroDramaShort';
 import type {MicroDramaProps} from './types';
 
-const defaultProps = vid0001 as MicroDramaProps;
+const defaultProps = smokeProps as MicroDramaProps;
 
 const calculateMetadata: CalculateMetadataFunction<MicroDramaProps> = ({props}) => ({
   durationInFrames: props.durationInFrames,

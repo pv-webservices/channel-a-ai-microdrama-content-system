@@ -7,6 +7,8 @@ The repository separates editorial intelligence from deterministic post-producti
 ## Current stage
 Phase 1 — Manual Validation with Remotion-assisted post-production.
 
+**Active production numbering was reset on 2026-09-09. The next selected story is VID-0001 / STORY-0001.** Pre-reset development artifacts are preserved under `archive/pre-reset-2026-09-09/` and do not consume active IDs.
+
 No autonomous publishing, silent Skill mutation, or end-to-end unattended pipeline is enabled.
 
 ## Canonical end-to-end architecture
@@ -58,7 +60,7 @@ INPUT → PROCESS → OUTPUT → QUALITY CHECK → NEXT STAGE
 ```
 
 ## Runtime setup
-Use Node.js 20–24. Install the exact locked dependency graph and run the full repository validation:
+Use Node.js 20–24:
 
 ```bash
 npm ci
@@ -66,30 +68,21 @@ npm run validate
 ```
 
 `npm run validate` performs:
-- Remotion manifest structural validation,
+- active Remotion manifest validation when active manifests exist,
 - strict TypeScript checking,
-- Remotion composition discovery using the VID-0001 props.
+- Remotion composition discovery using a neutral system smoke-test manifest.
 
-Then preview:
+The neutral smoke manifest is repository infrastructure only and does not consume VID-####.
 
-```bash
-npm run studio
-```
-
-VID-0001 timing/slate render:
-
-```bash
-npm run render:vid-0001
-```
-
-Until actual source paths are mapped, VID-0001 intentionally renders traceable production slates rather than pretending to be a final video.
-
-## Production-ready manifest gate
-Before a real candidate render, require mapped visual assets:
+## Active video manifests
+A real `remotion/data/VID-####.json` is created when that active video reaches the Remotion handoff. Before a production-ready candidate render:
 
 ```bash
 npm run validate:manifests -- --video=VID-0001 --require-assets
+npm run render:vid-0001
 ```
+
+Until VID-0001 is selected and its production manifest is created, the repository intentionally has no active VID manifest.
 
 ## Repository safety
 Pull requests and pushes to `main` run GitHub validation for the locked dependency install, manifests, TypeScript, and Remotion composition discovery. `package-lock.json` is the reproducible dependency source.
@@ -102,8 +95,9 @@ Raw performance is stored without invented values. One successful or failed vide
 - `skills/` — stage-specific Skills including Remotion Composer and Render Validator
 - `templates/` — production artifact contracts
 - `prompts/` — reusable prompt starters
-- `production/` — active and example production artifacts
-- `remotion/` — typed composition engine and per-video manifests
+- `production/` — active production artifacts
+- `archive/` — pre-reset historical/reference artifacts only
+- `remotion/` — typed composition engine, smoke validation, and active per-video manifests
 - `scripts/` — repository/manifest validation utilities
 - `workflows/` — canonical production and review procedures
 - `analytics/` — measured performance and validated learnings
