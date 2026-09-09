@@ -11,22 +11,29 @@
   - [x] human visual review approved
   - [x] no supplemental still keyframes required at this gate
   - [x] final image sources mapped per scene for Remotion
-- [ ] Stage 13 — Voiceover Production
+- [x] Stage 13 — Voiceover Production
+  - [x] AUD-01 generated
+  - [x] ElevenLabs Turbo v2.5
+  - [x] Grayson Kingsley voice
+  - [x] exact 2.0-second hook duration
 - [ ] Stage 14 — Sound Design Production
 
 ## Stage 12 result
 **COMPLETE — Human visual approval passed on 2026-09-09.**
 
-Approved Remotion visual sources:
-- AST-VID0001-SC01
-- AST-VID0001-SC02
-- AST-VID0001-SC03
-- AST-VID0001-SC04
-- AST-VID0001-SC05
-- AST-VID0001-SC06
-- AST-VID0001-SC07
+## Stage 13 result
+**COMPLETE — AUD-01 generated on 2026-09-09.**
+
+Narration:
+**“He had time to save only one.”**
+
+Timing:
+- frame 0 → 59
+- 2.0 seconds at 30 fps
+
+No narration occurs after SC-01.
 
 ## Current motion rule
 **No AI video generation is permitted.**
 
-The approved scene keyframes are animated deterministically in Remotion according to `remotion-motion-plan.md`. If preview later proves a beat needs another visual state, generate an additional still image only.
+The approved scene keyframes are animated deterministically in Remotion according to `remotion-motion-plan.md`.
