@@ -1,6 +1,9 @@
-# Video Prompt Starters
-Use `skills/video-prompt-generator/SKILL.md` as authority.
+# Deprecated — Animation Prompt Starters
 
-- Convert each storyboard scene into start-state → motion → end-state instructions.
-- Simplify motion to reduce generation instability.
-- Preserve cut continuity between adjacent shots.
+Channel A does not use AI video-generation prompts.
+
+Use:
+- `skills/remotion-scene-planner/SKILL.md`
+- `prompts/remotion-motion-prompts.md`
+
+Active video motion is created only in Remotion from approved still images/graphics.

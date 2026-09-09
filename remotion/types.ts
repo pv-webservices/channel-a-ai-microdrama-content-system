@@ -1,4 +1,4 @@
-export type AssetKind = 'image' | 'video' | 'graphic' | 'none';
+export type AssetKind = 'image' | 'graphic' | 'none';
 export type MotionPreset =
   | 'static'
   | 'slow-push-in'
