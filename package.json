@@ -1,9 +1,10 @@
 {
   "name": "channel-a-ai-microdrama-content-system",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "studio": "remotion studio remotion/index.ts",
+    "typecheck": "tsc --noEmit",
     "render": "remotion render remotion/index.ts MicroDramaShort renders/microdrama.mp4",
     "render:vid-0001": "remotion render remotion/index.ts MicroDramaShort renders/VID-0001.mp4 --props=remotion/data/VID-0001.json"
   },

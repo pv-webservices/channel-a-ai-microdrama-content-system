@@ -1,33 +1,50 @@
 # Content Production Workflow — Phase 1
 
-No video auto-publishes in Phase 1.
+No video auto-publishes in Phase 1. Remotion is the authoritative assembly and render layer after upstream assets are approved.
 
-1. Generate 10–20 concepts.
-2. Score them.
-3. Human selects one concept.
-4. Generate several hooks.
-5. Select the strongest honest hook.
-6. Write the micro-drama.
-7. Run retention review.
-8. Human approves the script.
-9. Create character sheets and stable Character IDs.
-10. Create storyboard.
-11. Generate image and video prompts separately.
-12. Produce visual assets using an approved external/manual toolchain.
-13. Produce voiceover.
-14. Plan sound design.
-15. Assemble video.
-16. Run Quality Control.
-17. Human final review.
-18. Publish manually.
-19. Record analytics.
-20. Create a postmortem after sufficient data exists.
+## Phase A — Concept
+1. Idea Discovery — generate 10–20 diverse concepts.
+2. Concept Scoring — score for internal prioritization.
+3. Human Concept Selection — choose what advances.
+
+## Phase B — Story
+4. Hook Development — create several honest 1–3 second openings.
+5. Micro-Drama Script Writing — hook → situation → conflict → escalation → turning point → payoff → resolution.
+6. Retention Review — diagnose pacing, predictability, exposition and visual stagnation.
+7. Human Script Approval — no production assets before approval.
+
+## Phase C — Pre-production
+8. Character Consistency — create stable Character IDs and sheets.
+9. Storyboard — create scene timing, action, camera, continuity, audio intent and Remotion handoff fields.
+10. Image Prompt Generation — create still/keyframe prompts where needed.
+11. Video Prompt Generation — create temporal motion prompts where generated motion is needed.
+
+## Phase D — Asset Production
+12. Visual Asset Production — generate/approve image and video assets.
+13. Voiceover Production — produce approved narration/dialogue.
+14. Sound Design Production — create/approve ambience, SFX, music direction and silence map.
+
+## Phase E — Remotion Post-production
+15. Remotion Composition & Assembly — convert storyboard + approved assets + voice + sound + captions into a frame-accurate 9:16 composition.
+16. Render Validation — render a candidate MP4 and verify technical integrity, timing, missing assets, sync and safe areas before editorial QC.
+
+## Phase F — Release & Learning
+17. Quality Control — strict story, retention, visual, audio, render and platform review.
+18. Human Final Approval — final editorial decision.
+19. Publish Manually — upload to the intended account/platform.
+20. Record Analytics — use measured values only.
+21. Postmortem & Skill Improvement — update learnings only after sufficient evidence.
 
 ## Gate rules
 - Concept gate: human chooses what gets scripted.
-- Script gate: no asset production before approval.
-- Final gate: QC supports but does not replace human approval.
+- Script gate: no asset production before script approval.
+- Asset gate: only approved source assets enter Remotion.
+- Render gate: candidate render must pass Render Validation before final QC.
+- Final gate: QC supports but never replaces human approval.
 - Analytics gate: no Skill change from one result.
 
 ## Artifact contract
-Prefer one `VID-####/` project folder containing the complete chain so decisions remain traceable.
+Prefer one VID-#### project folder containing the full chain. The Remotion data manifest must reference the same scene IDs, asset IDs, timing and approved audio/caption decisions as the production artifacts.
+
+## Remotion ownership boundary
+Remotion owns deterministic editing and rendering: scene sequencing, clip/image placement, controlled still-image motion, transitions, captions, audio placement, timing, overlays, safe-area treatment and final encoding. It does not own story ideation, character design, visual generation, voice generation, publishing decisions or analytics interpretation.

@@ -1,5 +1,112 @@
 {
   "videoId": "VID-0001",
   "title": "The Paper Crane",
-  "subtitle": "Original AI micro-drama"
+  "subtitle": "Original AI micro-drama",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "durationInFrames": 1140,
+  "scenes": [
+    {
+      "id": "SC-01",
+      "beat": "Nia pulls her discarded note back as a gloved hand reaches for it.",
+      "startFrame": 0,
+      "durationInFrames": 90,
+      "assetId": "AST-VID0001-SC01",
+      "assetKind": "none",
+      "motionPreset": "static",
+      "transition": "hard-cut",
+      "captionExclusion": "Keep note and reaching hand unobstructed."
+    },
+    {
+      "id": "SC-02",
+      "beat": "Nia notices handwritten sheets collected on the janitor cart.",
+      "startFrame": 90,
+      "durationInFrames": 150,
+      "assetId": "AST-VID0001-SC02",
+      "assetKind": "none",
+      "motionPreset": "slow-push-in",
+      "transition": "cut-on-glance",
+      "captionExclusion": "Keep cart notes readable."
+    },
+    {
+      "id": "SC-03",
+      "beat": "Nia blocks the cart and confronts Arun.",
+      "startFrame": 240,
+      "durationInFrames": 150,
+      "assetId": "AST-VID0001-SC03",
+      "assetKind": "none",
+      "motionPreset": "static",
+      "transition": "match-on-gesture",
+      "captionExclusion": "Keep both faces and cart center clear."
+    },
+    {
+      "id": "SC-04",
+      "beat": "Arun gestures toward the art room; match cut to the paper box.",
+      "startFrame": 390,
+      "durationInFrames": 150,
+      "assetId": "AST-VID0001-SC04",
+      "assetKind": "none",
+      "motionPreset": "static",
+      "transition": "match-cut",
+      "captionExclusion": "Keep hand gesture and box latch clear."
+    },
+    {
+      "id": "SC-05",
+      "beat": "The writing stays face-down while Arun trims the inked strip and folds the blank paper.",
+      "startFrame": 540,
+      "durationInFrames": 270,
+      "assetId": "AST-VID0001-SC05",
+      "assetKind": "none",
+      "motionPreset": "slow-push-in",
+      "transition": "cut-on-fold",
+      "captionExclusion": "No caption over the hand-fold interaction."
+    },
+    {
+      "id": "SC-06",
+      "beat": "The crane joins dozens in a donation box; Nia realizes what he is doing.",
+      "startFrame": 810,
+      "durationInFrames": 210,
+      "assetId": "AST-VID0001-SC06",
+      "assetKind": "none",
+      "motionPreset": "reaction-hold",
+      "transition": "brief-hold",
+      "captionExclusion": "Keep donation card and reaction visible."
+    },
+    {
+      "id": "SC-07",
+      "beat": "Nia tears off the blank half of her note and they begin folding together.",
+      "startFrame": 1020,
+      "durationInFrames": 120,
+      "assetId": "AST-VID0001-SC07",
+      "assetKind": "none",
+      "motionPreset": "slow-push-in",
+      "transition": "end-on-crease",
+      "captionExclusion": "Keep both hands and final crease unobstructed."
+    }
+  ],
+  "captions": [
+    {
+      "id": "CAP-01",
+      "startFrame": 8,
+      "durationInFrames": 75,
+      "text": "Why are you taking that?",
+      "emphasis": "taking that"
+    },
+    {
+      "id": "CAP-02",
+      "startFrame": 250,
+      "durationInFrames": 120,
+      "text": "Do you read these?",
+      "emphasis": "read these"
+    },
+    {
+      "id": "CAP-03",
+      "startFrame": 630,
+      "durationInFrames": 150,
+      "text": "He never even turned the words toward himself.",
+      "emphasis": "never even turned"
+    }
+  ],
+  "audioCues": []
 }
