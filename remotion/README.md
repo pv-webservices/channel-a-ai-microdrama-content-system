@@ -1,20 +1,27 @@
 # Remotion Post-production Layer
 
-This directory is the deterministic composition and rendering layer for Channel A. It begins after storyboard/source approval and does not replace writing, character design, generation, final QC or human approval.
+This directory is the deterministic composition and rendering layer for Channel A. It begins after storyboard/source approval and does not replace writing, character design, generation, final QC, or human approval.
 
 ## Executable data contract
-Each `remotion/data/VID-####.json` manifest contains dimensions, fps, total frames, scenes, Asset IDs, motion presets, captions and audio cues.
+Each `remotion/data/VID-####.json` manifest contains dimensions, fps, total frames, scenes, Asset IDs, motion presets, captions, and audio cues.
 
 Important distinctions:
 - `cutIntent` — editorial meaning of the cut, e.g. `match-cut`, `cut-on-fold`, `cut-on-glance`.
 - `entryTransition` — executable visual behavior. Currently supported: `cut`, `fade`.
-- `motionPreset` — executable motion. Supported: static, slow push/pull, left/right pan, reaction hold and custom.
+- `motionPreset` — executable motion. Supported: static, slow push/pull, left/right pan, reaction hold, and custom.
 - `caption.position` — executable top/middle/bottom safe placement.
 - `caption.emphasis` — emphasized phrase rendered within the caption.
 
 Images and graphics with an `assetPath` render through `Img`; videos render through `OffthreadVideo` and are muted by default. Missing/unmapped assets render a production slate so incomplete media is obvious.
 
-## Validation
+## Setup and validation
+
+```bash
+npm ci
+npm run validate
+```
+
+Individual checks:
 
 ```bash
 npm run validate:manifests
@@ -48,4 +55,4 @@ Place local source files under `public/assets/VID-####/`. Manifest paths are rel
 - `data/` — per-video manifests
 
 ## Editing principle
-Use code to make approved assets precise and reproducible, not to hide weak storytelling under effects. Hard cuts, holds and silence remain first-class choices.
+Use code to make approved assets precise and reproducible, not to hide weak storytelling under effects. Hard cuts, holds, and silence remain first-class choices.
