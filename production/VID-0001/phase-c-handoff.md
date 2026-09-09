@@ -37,7 +37,10 @@ Visual assets should be accepted/rejected against the validation checklists in `
 
 Begin Stage 12 — Visual Asset Production.
 
-For image assets, the user's required route is:
-**Magnific MCP → Google Nano Banana 2.0 → 1K → unlimited generation.**
+For image assets, the current user-approved Stage 12 policy is:
 
-If that route cannot be used, stop and ask the user.
+**Magnific MCP, credit-based generation**
+1. Google Nano Banana 2 Lite — first priority for reference/simple/iteration frames.
+2. Google Nano Banana 2 — use for complex generations or when Lite does not meet continuity/anatomy requirements.
+
+Use 9:16. Use 1K explicitly where the selected model exposes a resolution selector. Do not substitute another image model without approval.

@@ -4,9 +4,9 @@
 **Phase:** C — Pre-production  
 **Stage:** 10 — Image Prompt Generation  
 **Status:** COMPLETE  
-**Target image workflow for later generation:** Magnific MCP → Google Nano Banana 2.0 → 1K → unlimited generation  
+**Stage 12 image workflow (updated 2026-09-09):** Magnific MCP, credit-based; Google Nano Banana 2 Lite first, Google Nano Banana 2 for complex generations; 9:16; 1K explicitly where supported  
 **Aspect ratio:** 9:16 vertical  
-**Important:** This document prepares prompts only. It does not authorize substitution of another image model.
+**Important:** Stage 10 prepared prompts only. Stage 12 generation is now authorized under the updated Lite-first credit-based policy above. Do not substitute other image models without user approval.
 
 ## Generation Order
 
@@ -491,6 +491,6 @@ Prepared:
 - per-frame validation checklists
 - cross-frame validation gate
 - explicit generation order
-- exact user-requested future provider/model constraint recorded
+- user-approved provider/model policy recorded
 
-No images were generated during Stage 10.
+No images were generated during Stage 10. Stage 12 later generated the reference/keyframe batch using the updated policy documented in `visual-assets.md`.
