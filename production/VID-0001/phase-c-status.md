@@ -7,15 +7,22 @@
 - [x] Stage 8 — Character Consistency
   - CHAR-001 — Older Brother
   - CHAR-002 — Younger Sister
-- [ ] Stage 9 — Storyboard Generation
+- [x] Stage 9 — Storyboard Generation
+  - 7 scenes
+  - 25.0 seconds
+  - 750 frames at 30 fps
+  - stable Scene IDs SC-01 through SC-07
+  - stable Asset IDs AST-VID0001-SC01 through AST-VID0001-SC07
 - [ ] Stage 10 — Image Prompt Generation
 - [ ] Stage 11 — Video Prompt Generation
 
 ## Current authority
 
-Character identity is now locked in `characters.md`.
+- Script authority: `script.md`
+- Character authority: `characters.md`
+- Scene/timing/geography authority: `storyboard.md`
 
-Future storyboard and generation prompts must use Character IDs and preserve the continuity locks.
+Future image/video prompts must preserve Character IDs, screen geography, props, scene timing, and continuity rules from these documents.
 
 ## Image generation provider preference
 
