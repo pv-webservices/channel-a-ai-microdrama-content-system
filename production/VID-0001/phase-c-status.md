@@ -13,7 +13,11 @@
   - 750 frames at 30 fps
   - stable Scene IDs SC-01 through SC-07
   - stable Asset IDs AST-VID0001-SC01 through AST-VID0001-SC07
-- [ ] Stage 10 — Image Prompt Generation
+- [x] Stage 10 — Image Prompt Generation
+  - 4 continuity/reference prompts
+  - 7 scene keyframe prompts
+  - Nano Banana-ready prompt package
+  - cross-frame continuity validation
 - [ ] Stage 11 — Video Prompt Generation
 
 ## Current authority
@@ -21,14 +25,16 @@
 - Script authority: `script.md`
 - Character authority: `characters.md`
 - Scene/timing/geography authority: `storyboard.md`
+- Still-image prompt authority: `image-prompts.md`
 
-Future image/video prompts must preserve Character IDs, screen geography, props, scene timing, and continuity rules from these documents.
+## Image generation provider constraint
 
-## Image generation provider preference
+Actual image generation has **not** happened yet.
 
-When Stage 10 reaches actual image generation, use the user's connected Magnific workflow with:
+When visual assets are generated later, use only the user's requested route:
+- Magnific MCP
 - Google Nano Banana 2.0
 - 1K resolution
-- unlimited-generation option requested by user
+- unlimited-generation option
 
-If that exact generation route is unavailable or errors at generation time, stop and ask the user rather than silently substituting another image model.
+Do not silently substitute another image model. If the exact route is unavailable or errors, stop and ask the user.
