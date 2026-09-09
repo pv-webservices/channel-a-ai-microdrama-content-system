@@ -19,6 +19,9 @@ const assertPositiveInt = (value, label) => {
 const assertNonNegativeInt = (value, label) => {
   if (!Number.isInteger(value) || value < 0) fail(`${label} must be a non-negative integer.`);
 };
+const assertVolume = (value, label) => {
+  if (typeof value !== 'number' || value < 0 || value > 2) fail(`${label} must be between 0 and 2.`);
+};
 
 const manifestDir = path.resolve('remotion/data');
 if (!fs.existsSync(manifestDir)) fail('remotion/data does not exist.');
@@ -88,7 +91,19 @@ for (const file of files) {
     assertPositiveInt(cue.durationInFrames, `${file}/${cue.id}: durationInFrames`);
     if (cue.startFrame + cue.durationInFrames > manifest.durationInFrames) fail(`${file}/${cue.id}: audio cue extends beyond video duration.`);
     if (typeof cue.path !== 'string' || cue.path.trim() === '') fail(`${file}/${cue.id}: audio path is required.`);
-    if (cue.volume !== undefined && (typeof cue.volume !== 'number' || cue.volume < 0 || cue.volume > 2)) fail(`${file}/${cue.id}: volume must be between 0 and 2.`);
+    if (cue.volume !== undefined) assertVolume(cue.volume, `${file}/${cue.id}: volume`);
+    if (cue.sourceStartFrame !== undefined) assertNonNegativeInt(cue.sourceStartFrame, `${file}/${cue.id}: sourceStartFrame`);
+    if (cue.volumeEnvelope !== undefined) {
+      if (!Array.isArray(cue.volumeEnvelope) || cue.volumeEnvelope.length === 0) fail(`${file}/${cue.id}: volumeEnvelope must be a non-empty array.`);
+      let previousFrame = -1;
+      for (const point of cue.volumeEnvelope) {
+        assertNonNegativeInt(point.frame, `${file}/${cue.id}: envelope frame`);
+        if (point.frame >= cue.durationInFrames) fail(`${file}/${cue.id}: envelope frame ${point.frame} must be inside cue duration.`);
+        if (point.frame <= previousFrame) fail(`${file}/${cue.id}: volumeEnvelope frames must be strictly increasing.`);
+        assertVolume(point.volume, `${file}/${cue.id}: envelope volume`);
+        previousFrame = point.frame;
+      }
+    }
   }
 
   console.log(`✓ ${file}: ${manifest.scenes.length} scenes, ${manifest.durationInFrames} frames @ ${manifest.fps}fps`);

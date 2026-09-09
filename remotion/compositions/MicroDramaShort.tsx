@@ -8,7 +8,7 @@ import {
   staticFile,
   useCurrentFrame,
 } from 'remotion';
-import type {CaptionCue, MicroDramaProps, SceneSpec} from '../types';
+import type {AudioCue, CaptionCue, MicroDramaProps, SceneSpec} from '../types';
 
 const resolveSource = (path: string) =>
   /^https?:\/\//i.test(path) ? path : staticFile(path.replace(/^\/+/, ''));
@@ -141,6 +141,31 @@ const CaptionLayer: React.FC<{cue: CaptionCue}> = ({cue}) => {
   );
 };
 
+const cueVolume = (cue: AudioCue, frame: number) => {
+  const points = cue.volumeEnvelope;
+  if (!points || points.length === 0) return cue.volume ?? 1;
+  if (frame <= points[0].frame) return points[0].volume;
+  const last = points[points.length - 1];
+  if (frame >= last.frame) return last.volume;
+
+  for (let i = 0; i < points.length - 1; i += 1) {
+    const a = points[i];
+    const b = points[i + 1];
+    if (frame >= a.frame && frame <= b.frame) {
+      return interpolate(frame, [a.frame, b.frame], [a.volume, b.volume], clamp);
+    }
+  }
+  return cue.volume ?? 1;
+};
+
+const AudioLayer: React.FC<{cue: AudioCue}> = ({cue}) => (
+  <Audio
+    src={resolveSource(cue.path)}
+    startFrom={cue.sourceStartFrame ?? 0}
+    volume={(frame) => cueVolume(cue, frame)}
+  />
+);
+
 export const MicroDramaShort: React.FC<MicroDramaProps> = ({scenes, captions, audioCues}) => (
   <AbsoluteFill style={{backgroundColor: '#090909'}}>
     {scenes.map((scene) => (
@@ -157,7 +182,7 @@ export const MicroDramaShort: React.FC<MicroDramaProps> = ({scenes, captions, au
 
     {audioCues.map((cue) => (
       <Sequence key={cue.id} from={cue.startFrame} durationInFrames={cue.durationInFrames}>
-        <Audio src={resolveSource(cue.path)} volume={cue.volume ?? 1} />
+        <AudioLayer cue={cue} />
       </Sequence>
     ))}
   </AbsoluteFill>

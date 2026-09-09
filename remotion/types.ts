@@ -46,6 +46,11 @@ export type CaptionCue = {
   position?: CaptionPosition;
 };
 
+export type VolumeEnvelopePoint = {
+  frame: number;
+  volume: number;
+};
+
 export type AudioCue = {
   id: string;
   kind: AudioKind;
@@ -53,6 +58,8 @@ export type AudioCue = {
   durationInFrames: number;
   path: string;
   volume?: number;
+  sourceStartFrame?: number;
+  volumeEnvelope?: VolumeEnvelopePoint[];
 };
 
 export type MicroDramaProps = {
