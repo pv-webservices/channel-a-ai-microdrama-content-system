@@ -16,9 +16,19 @@
 - [x] Stage 10 — Image Prompt Generation
   - 4 continuity/reference prompts
   - 7 scene keyframe prompts
-  - Nano Banana-ready prompt package
-  - cross-frame continuity validation
-- [ ] Stage 11 — Video Prompt Generation
+  - cross-frame validation
+- [x] Stage 11 — Video Prompt Generation
+  - 7 scene motion prompts
+  - start/end states
+  - temporal motion progression
+  - camera/subject/object motion separated
+  - negative motion constraints
+  - transition handoffs
+  - motion-continuity validation
+
+## Phase C status
+
+**COMPLETE**
 
 ## Current authority
 
@@ -26,15 +36,23 @@
 - Character authority: `characters.md`
 - Scene/timing/geography authority: `storyboard.md`
 - Still-image prompt authority: `image-prompts.md`
+- Motion prompt authority: `video-prompts.md`
+
+## Handoff to Phase D
+
+Proceed to:
+12. Visual Asset Production
+13. Voiceover Production
+14. Sound Design Production
 
 ## Image generation provider constraint
 
-Actual image generation has **not** happened yet.
-
-When visual assets are generated later, use only the user's requested route:
+When images are actually generated in Stage 12, use only:
 - Magnific MCP
 - Google Nano Banana 2.0
 - 1K resolution
 - unlimited-generation option
 
-Do not silently substitute another image model. If the exact route is unavailable or errors, stop and ask the user.
+If that exact image-generation route is unavailable or errors, stop and ask the user instead of substituting another image model.
+
+Video-generation provider is not locked by this document; video prompts remain provider-neutral unless the user specifies a video model/provider.
