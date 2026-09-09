@@ -8,8 +8,16 @@
   - Selected: H1 — “He had time to save only one.”
 - [x] Stage 5 — Micro-Drama Script Writing
 - [x] Stage 6 — Retention Optimization
-- [ ] Stage 7 — Human Script Approval
+- [x] Stage 7 — Human Script Approval
 
-**Current gate:** Awaiting human approval of the retention-optimized script.
+**Phase B status:** COMPLETE
 
-No Phase C character/storyboard production should begin until Stage 7 is approved.
+## Approved handoff to Phase C
+
+Proceed with:
+1. Character Consistency
+2. Storyboard Generation
+3. Image Prompt Generation
+4. Video Prompt Generation
+
+The approved script must remain authoritative unless a documented change returns through the script gate.

@@ -1,7 +1,8 @@
 # VID-0001 / STORY-0001 — Script
 
 **Working title:** The Flooded Box  
-**Status:** RETENTION-OPTIMIZED CANDIDATE — awaiting human script approval  
+**Status:** APPROVED — Human Script Approval complete  
+**Approved on:** 2026-09-09  
 **Target duration:** ~25 seconds  
 **Selected hook:** H1 — “He had time to save only one.”  
 **Voice mode:** Minimal narrator; no character dialogue required
@@ -26,44 +27,44 @@ Show a teenage older brother making an irreversible choice between a replaceable
 
 ### 0.0–2.0s — HOOK
 
-**VISUAL:**
+**VISUAL:**  
 Vertical close-wide composition in a basement storage area. Water is already spreading across the floor beneath a low shelf. On one side: a clearly **unplugged** game console and controller. On the other: a worn cardboard box with softened lower corners. The 17-year-old older brother rushes into frame and stops between them.
 
-**AUDIO:**
+**AUDIO:**  
 Heavy water ambience. No music for the first beat.
 
-**VO:**
+**VO:**  
 **“He had time to save only one.”**
 
 ---
 
 ### 2.0–5.0s — FIRST INSTINCT
 
-**VISUAL:**
+**VISUAL:**  
 His hand shoots toward the console. Water advances beneath the shelf. He grips the console edge—
 
 Then hears wet cardboard tear.
 
-**AUDIO:**
+**AUDIO:**  
 Water + a sharp cardboard rip. No additional narration.
 
 ---
 
 ### 5.0–8.0s — MEMORY REVEAL
 
-**VISUAL:**
+**VISUAL:**  
 A child’s drawing slides partly from the weakening box. He catches it before it touches the water.
 
 The drawing is simple and instantly readable: two siblings holding hands, with several other handmade notes/photos visible inside the box.
 
-**AUDIO:**
+**AUDIO:**  
 Water remains dominant. A small paper slap/fold sound as he catches it.
 
 ---
 
 ### 8.0–10.5s — DECISION
 
-**VISUAL:**
+**VISUAL:**  
 One fast eyeline sequence:
 
 drawing → memory box → console.
@@ -72,26 +73,26 @@ No long reaction shot.
 
 He releases the console.
 
-**AUDIO:**
+**AUDIO:**  
 Room tone narrows slightly. Music may enter here as a restrained low emotional bed, but no swell yet.
 
 ---
 
 ### 10.5–14.5s — CHOICE
 
-**VISUAL:**
+**VISUAL:**  
 He lifts the cardboard box with both arms, keeping the loose drawing pressed safely against it, and moves toward the stairs.
 
 The console remains behind.
 
-**AUDIO:**
+**AUDIO:**  
 Wet footsteps, box handling, water.
 
 ---
 
 ### 14.5–20.5s — PAYOFF
 
-**VISUAL:**
+**VISUAL:**  
 At the basement stairs, his younger sister appears.
 
 She first sees the console still sitting in the spreading water zone.
@@ -100,14 +101,14 @@ Then her eyes move to the dry box in her brother’s arms.
 
 He does not explain.
 
-**AUDIO:**
+**AUDIO:**  
 Music becomes slightly warmer but remains understated. No dialogue.
 
 ---
 
 ### 20.5–25.0s — RESOLUTION
 
-**VISUAL:**
+**VISUAL:**  
 The sister pulls the saved drawing from the top of the box.
 
 She looks at it, then at her brother.
@@ -118,7 +119,7 @@ She presses the drawing back against the box and steps beside him.
 
 **CUT immediately.**
 
-**AUDIO:**
+**AUDIO:**  
 Water ambience continues underneath. Let the final beat breathe for less than a second. No moral line. No outro.
 
 ## 4. Approximate Spoken Word Count
@@ -154,3 +155,7 @@ Water ambience continues underneath. Let the final beat breathe for less than a 
 - [x] The brother’s motivation is believable.
 - [x] The script naturally fits ~25 seconds.
 - [x] The ending stops immediately after emotional fulfillment.
+
+## Human Approval
+
+**APPROVED by user on 2026-09-09.**
