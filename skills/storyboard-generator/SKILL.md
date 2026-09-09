@@ -1,9 +1,9 @@
 # Storyboard Generator
 
-**Version:** v1.0
+**Version:** v1.1
 
 ## Purpose
-Convert an approved script into scene-by-scene production instructions while preserving clarity and continuity.
+Convert an approved script into scene-by-scene production instructions that are generatable and directly usable by the Remotion post-production stage.
 
 ## Inputs
 Required:
@@ -19,23 +19,24 @@ Optional:
 
 ## Outputs
 For every scene include:
-- Scene number
-- Timestamp estimate
-- Duration
-- Shot type
+- Scene ID/number
+- timestamp estimate and duration
+- shot type
 - Character ID(s)
-- Action
-- Facial expression/emotion
-- Environment
-- Camera movement
-- Visual composition
-- Lighting
-- Transition
-- Voiceover/dialogue
-- Sound effects
-- Background audio
+- action and emotion
+- environment
+- camera movement
+- visual composition
+- lighting
+- transition intent
+- voiceover/dialogue
+- SFX/background audio
 - AI-generation notes
-- Continuity dependencies
+- continuity dependencies
+- planned Asset ID placeholder
+- preferred source type: still, generated video, graphic, or flexible
+- Remotion motion treatment recommendation for stills
+- caption exclusion/safe-area note
 
 ## Responsibilities
 - Convert beats into generatable shots.
@@ -43,6 +44,7 @@ For every scene include:
 - Give meaningful new visual information.
 - Keep key faces/actions mobile-readable.
 - Separate camera movement from subject movement.
+- Create an explicit handoff to Remotion instead of leaving editing decisions implicit.
 
 ## Rules
 - Reference stable Character IDs.
@@ -50,18 +52,22 @@ For every scene include:
 - Avoid movement for its own sake.
 - Do not let transitions hide comprehension.
 - Timestamp totals should approximately match target duration.
+- Do not require generated video when a strong still plus restrained Remotion motion would communicate the beat equally well.
+- Mark critical hand/object actions as caption-exclusion moments.
 
 ## Quality Criteria
-A production agent can generate each shot without guessing who, where, what action, emotion, continuity, or handoff is required.
+A production agent can create the shot and a Remotion composer can place it without guessing identity, timing, source type, motion intent, audio intent or continuity.
 
 ## Failure Modes
-- vague "cinematic shot"
+- vague cinematic shot
 - no start/end implication
 - conflicting camera directions
 - excessive cuts
 - missing continuity notes
 - narration-only scenes
 - total durations far from target
+- every scene forced to generated video
+- no Remotion handoff information
 
 ## Self-Check
 - [ ] durations sum near target
@@ -70,9 +76,12 @@ A production agent can generate each shot without guessing who, where, what acti
 - [ ] camera and subject motion are distinct
 - [ ] continuity dependencies are explicit
 - [ ] audio intent is included
+- [ ] source type is recommended
+- [ ] caption exclusion areas are identified
+- [ ] Remotion motion/transition intent is explicit
 
 ## Examples
-Scene example: 00:07–00:11, medium close-up, CHAR-001 pauses at a paper crane, restrained confusion, subtle push-in, soft corridor light, paper rustle, preserve wardrobe and prop position.
+SC-05, 18–27s: controlled hand inserts, CHAR-002 folds blank paper. Prefer generated video if hand interaction is reliable; otherwise use two approved still/keyframe assets with a restrained Remotion push-in and cut-on-fold. No captions over hands.
 
 ## Performance Feedback
-Later compare scene density, pacing patterns, and drop-off locations. Treat changes as hypotheses unless repeated evidence supports them.
+Compare scene density, source-type choices, pacing and drop-off locations only across sufficient samples. Treat proposed changes as hypotheses until repeated evidence supports them.

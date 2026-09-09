@@ -1,95 +1,75 @@
 # Repository Inventory
 
-- `.env.example`
-- `.gitignore`
-- `CONTRIBUTING.md`
-- `PROJECT.md`
-- `README.md`
-- `analytics/analytics-schema.md`
-- `analytics/content-pillar-performance.md`
-- `analytics/hook-performance.md`
-- `analytics/learnings.md`
-- `analytics/performance.csv`
-- `analytics/story-performance.md`
-- `automation/README.md`
-- `automation/future-architecture.md`
-- `brand/audience-profile.md`
-- `brand/channel-strategy.md`
-- `brand/content-pillars.md`
-- `brand/platform-strategy.md`
-- `brand/storytelling-principles.md`
-- `brand/visual-direction.md`
-- `brand/voice-direction.md`
-- `docs/ai-content-guidelines.md`
-- `docs/naming-conventions.md`
-- `docs/originality-policy.md`
-- `docs/platform-compliance.md`
-- `docs/versioning-strategy.md`
-- `examples/high-performing/.gitkeep`
-- `examples/low-performing/.gitkeep`
-- `examples/reference-breakdowns/.gitkeep`
-- `experiments/README.md`
-- `experiments/experiment-template.md`
-- `production/README.md`
-- `production/approved/.gitkeep`
-- `production/captions/.gitkeep`
-- `production/characters/.gitkeep`
-- `production/examples/VID-0001/characters.md`
-- `production/examples/VID-0001/concept-score.md`
-- `production/examples/VID-0001/concept.md`
-- `production/examples/VID-0001/hooks.md`
-- `production/examples/VID-0001/image-prompts.md`
-- `production/examples/VID-0001/metadata.md`
-- `production/examples/VID-0001/qc-report.md`
-- `production/examples/VID-0001/retention-review.md`
-- `production/examples/VID-0001/script.md`
-- `production/examples/VID-0001/sound-design.md`
-- `production/examples/VID-0001/storyboard.md`
-- `production/examples/VID-0001/video-prompts.md`
-- `production/examples/VID-0001/voiceover.md`
-- `production/ideas/.gitkeep`
-- `production/published/.gitkeep`
-- `production/scripts/.gitkeep`
-- `production/sound-design/.gitkeep`
-- `production/storyboards/.gitkeep`
-- `production/video-prompts/.gitkeep`
-- `production/visual-prompts/.gitkeep`
-- `production/voiceovers/.gitkeep`
-- `prompts/animation-prompts.md`
-- `prompts/character-prompts.md`
-- `prompts/hook-prompts.md`
-- `prompts/idea-prompts.md`
-- `prompts/metadata-prompts.md`
-- `prompts/sound-prompts.md`
-- `prompts/story-prompts.md`
-- `prompts/storyboard-prompts.md`
-- `prompts/visual-prompts.md`
-- `skills/caption-title-generator/SKILL.md`
-- `skills/character-consistency/SKILL.md`
-- `skills/concept-scorer/SKILL.md`
-- `skills/first-frame-optimizer/SKILL.md`
-- `skills/hook-writer/SKILL.md`
-- `skills/idea-discovery/SKILL.md`
-- `skills/image-prompt-generator/SKILL.md`
-- `skills/microdrama-writer/SKILL.md`
-- `skills/quality-control/SKILL.md`
-- `skills/retention-optimizer/SKILL.md`
-- `skills/sound-design-planner/SKILL.md`
-- `skills/storyboard-generator/SKILL.md`
-- `skills/video-prompt-generator/SKILL.md`
-- `skills/voiceover-writer/SKILL.md`
-- `templates/20-second-story.md`
-- `templates/30-second-story.md`
-- `templates/45-second-story.md`
-- `templates/60-second-story.md`
-- `templates/character-sheet-template.md`
-- `templates/postmortem-template.md`
-- `templates/production-brief-template.md`
-- `templates/storyboard-template.md`
-- `templates/visual-prompt-template.md`
-- `templates/voiceover-template.md`
-- `workflows/analytics-review.md`
-- `workflows/content-production.md`
-- `workflows/publishing-checklist.md`
-- `workflows/script-review.md`
-- `workflows/visual-review.md`
+This inventory lists the major production-system surfaces. Git remains the authoritative complete file listing.
+
+## Core
+- README.md
+- PROJECT.md
+- CONTRIBUTING.md
+- package.json
+- tsconfig.json
+- .env.example
+- .gitignore
+
+## Brand
+- brand/channel-strategy.md
+- brand/audience-profile.md
+- brand/storytelling-principles.md
+- brand/visual-direction.md
+- brand/voice-direction.md
+- brand/content-pillars.md
+- brand/platform-strategy.md
+
+## Skills
+- idea-discovery
+- concept-scorer
+- hook-writer
+- microdrama-writer
+- retention-optimizer
+- storyboard-generator
+- character-consistency
+- image-prompt-generator
+- video-prompt-generator
+- voiceover-writer
+- sound-design-planner
+- first-frame-optimizer
+- caption-title-generator
+- remotion-composer
+- render-validator
+- quality-control
+
+Each Skill lives at skills/<name>/SKILL.md.
+
+## Templates
+- duration story templates
+- character sheet
+- storyboard
+- visual prompt
+- voiceover
+- production brief
+- Remotion composition plan
+- Render Validation
+- postmortem
+
+## Workflows
+- workflows/content-production.md
+- workflows/script-review.md
+- workflows/visual-review.md
+- workflows/remotion-composition.md
+- workflows/render-validation.md
+- workflows/publishing-checklist.md
+- workflows/analytics-review.md
+
+## Remotion
+- remotion/index.ts
+- remotion/Root.tsx
+- remotion/types.ts
+- remotion/compositions/MicroDramaShort.tsx
+- remotion/data/VID-0001.json
+- remotion/README.md
+
+## Production example
+VID-0001 includes the original editorial artifact chain plus remotion-plan.md and render-validation.md.
+
+## Analytics / experiments / governance
+See analytics/, experiments/, automation/ and docs/ for performance learning, future architecture, originality, compliance, naming and versioning.

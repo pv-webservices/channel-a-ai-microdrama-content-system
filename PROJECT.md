@@ -1,164 +1,87 @@
 # Project Source of Truth
 
 ## Mission
-
-Build a scalable AI-first short-form storytelling system capable of repeatedly producing original, emotionally engaging and visually distinctive micro-dramas.
+Build a scalable AI-first short-form storytelling system capable of repeatedly producing original, emotionally engaging and visually distinctive micro-dramas, with Remotion providing a deterministic editing/rendering layer after source assets are approved.
 
 ## Product definition
+The output is fictional short-form cinematic storytelling designed primarily for YouTube Shorts and Instagram Reels. The project does not depend on human actors, cameras, physical locations or manual filming.
 
-The output is fictional short-form cinematic storytelling designed primarily for YouTube Shorts and Instagram Reels. The project does not depend on human actors, cameras, physical locations, or manual filming.
-
-The system should favor:
-- visible action over explanation,
-- coherent character motivation,
-- emotional clarity,
-- meaningful variation,
-- controlled cinematic visuals,
-- retention-aware pacing,
-- provider independence,
-- human quality review.
-
-It should reject quote-video thinking, shallow moral lectures, repetitive content-farm structures, and fake real-person events.
+The system favors visible action, coherent motivation, emotional clarity, meaningful variation, controlled cinematic visuals, retention-aware pacing, provider independence, deterministic editing and human quality review.
 
 ## Current scope
-
-**Phase 1 — Manual Validation**
+Phase 1 — Manual Validation with Remotion-assisted post-production.
 
 In scope:
-- reusable Skills,
-- production templates,
-- manual/semi-assisted workflow,
-- structured example production,
-- experiments,
-- analytics schema,
-- compliance/originality policy,
-- version-controlled learnings.
+- reusable Skills and templates
+- manual/semi-assisted editorial and asset-generation workflow
+- code-based Remotion composition/rendering
+- explicit render-validation gate
+- experiments and analytics schema
+- compliance/originality controls
+- version-controlled learnings
 
 Out of scope:
-- autonomous generation pipelines,
-- paid API integrations,
-- automated publishing,
-- automated Skill mutation,
-- background trend scraping,
-- automated analytics ingestion.
+- autonomous idea-to-publish execution
+- automated publishing
+- automated Skill mutation
+- background trend scraping
+- automated analytics ingestion
+- unreviewed cloud/batch rendering at scale
 
 ## Primary success metrics
+Use real channel data only: views, reach, impressions, 3-second views/retention, scroll-away rate where available, average percentage viewed, average watch time, completion, replay, likes, comments, shares, saves, follower/subscriber conversion, profile visits, traffic source, platform, duration, hook type, story type, emotional category and visual style.
 
-When real channel data exists, track:
-- views
-- reach
-- impressions
-- 3-second views
-- 3-second retention
-- scroll-away rate where available
-- average percentage viewed
-- average watch time
-- completion rate
-- replay rate
-- likes
-- comments
-- shares
-- saves
-- follower/subscriber conversion
-- followers gained
-- subscribers gained
-- profile visits
-- traffic source
-- platform
-- video duration
-- hook type
-- story type
-- emotional category
-- visual style
-
-**Do not invent performance benchmarks.** Baselines and targets must come from actual published channel data or explicitly sourced research.
+Do not invent performance benchmarks.
 
 ## Quality principles
+1. Story before effects.
+2. Visible behavior before redundant narration.
+3. Retention without deceptive hooks.
+4. Character continuity is production-critical.
+5. Sound and silence are narrative tools.
+6. Mobile readability is mandatory.
+7. Originality is structural, not cosmetic.
+8. Remotion motion must serve attention, emotion or comprehension.
+9. Deterministic edit timing must remain traceable to Scene IDs and Asset IDs.
+10. Render Validation is technical; Quality Control is editorial.
+11. Human approval is a control gate.
+12. Analytics require sample discipline.
+13. Core storytelling stays provider-independent.
 
-1. **Story before slogan.** Every video needs a situation, conflict, progression and earned ending.
-2. **Visible behavior first.** Narration should not duplicate what the viewer can already see.
-3. **Retention without deception.** Hooks may withhold answers, not fabricate promises.
-4. **Continuity is production-critical.** Character IDs and stable identity specifications are mandatory after approval.
-5. **Sound is narrative.** Silence, ambience, impacts and music direction should reinforce beats.
-6. **Mobile readability.** Composition must work at small vertical viewing sizes.
-7. **Originality is structural.** Cosmetic substitutions do not create a new story.
-8. **Analytics require sample discipline.** One outlier is not a channel learning.
-9. **Human approval is a control gate.** Phase 1 has no auto-publishing.
-10. **Provider independence.** Core documents describe capabilities, not vendors.
+## Canonical production phases
+Phase A Concept: stages 1–3.
+Phase B Story: stages 4–7.
+Phase C Pre-production: stages 8–11.
+Phase D Asset Production: stages 12–14.
+Phase E Remotion Post-production: stages 15–16.
+Phase F Release & Learning: stages 17–21.
 
-## Standard stage contract
+Canonical stage definitions live in workflows/content-production.md.
 
-```text
-INPUT → PROCESS → OUTPUT → QUALITY CHECK → NEXT STAGE
-```
+## Remotion governance
+- Storyboard timing is the editorial plan.
+- The Remotion composition plan is the exact edit specification for a candidate render.
+- A timing or order change that affects meaning must be documented rather than hidden in code.
+- Approved Asset IDs must map to source paths in the Remotion manifest.
+- Generated source-video audio is muted unless explicitly approved for the mix.
+- Candidate renders must pass Render Validation before final Quality Control.
+- Reusable components are preferred over arbitrary one-off effects.
 
 ## Development phases
-
 ### Phase 1 — Manual Validation
-Goal: find repeatable storytelling formats.
-- Human approval at all major stages.
-- Build an initial library of roughly 20–50 videos before major automation decisions.
-- Establish baselines from real channel data.
-- No auto-publishing.
+Validate repeatable storytelling and editing patterns across roughly 20–50 videos before major automation decisions. Human approval remains mandatory.
 
 ### Phase 2 — Assisted Production
-Automate repetitive preparation and production tasks while retaining human topic selection and final-content approval.
-
-Potential candidates:
-- project folder scaffolding,
-- artifact format validation,
-- prompt compilation,
-- shot-list formatting,
-- draft metadata generation.
+Automate scaffolding, artifact validation, prompt compilation, manifest preparation, render preparation and draft metadata while humans retain concept/script/final approval.
 
 ### Phase 3 — Production Automation
-Potentially automate:
-- generation orchestration,
-- file handling,
-- video composition,
-- metadata preparation,
-- analytics collection.
-
-Final human approval remains required.
+Potentially automate generation orchestration, file handling, Remotion manifest compilation, programmatic rendering, metadata preparation and analytics collection. Final human approval remains required.
 
 ### Phase 4 — Performance Feedback
-Use sufficient historical analytics to recommend changes to:
-- hooks,
-- stories,
-- lengths,
-- pacing,
-- visual styles,
-- content pillars.
+Use sufficient historical analytics to recommend changes to hooks, stories, lengths, pacing, visual styles, Remotion edit patterns and content pillars. Skill changes remain version-controlled.
 
-Skill changes remain version controlled.
-
-## Initial Skill priority
-
-Production-ready first:
-1. idea-discovery
-2. concept-scorer
-3. hook-writer
-4. microdrama-writer
-5. retention-optimizer
-6. storyboard-generator
-7. character-consistency
-8. image-prompt-generator
-9. video-prompt-generator
-10. voiceover-writer
-11. quality-control
-
-Functional first versions:
-- sound-design-planner
-- caption-title-generator
-- first-frame-optimizer
+## Skill priority
+Core production Skills now include idea-discovery, concept-scorer, hook-writer, microdrama-writer, retention-optimizer, character-consistency, storyboard-generator, image-prompt-generator, video-prompt-generator, voiceover-writer, sound-design-planner, remotion-composer, render-validator, quality-control, first-frame-optimizer and caption-title-generator.
 
 ## Governance
-
-Authoritative policy files:
-- `docs/originality-policy.md`
-- `docs/platform-compliance.md`
-- `docs/ai-content-guidelines.md`
-- `docs/naming-conventions.md`
-- `docs/versioning-strategy.md`
-
-When convenience prompts conflict with a Skill or policy document, the Skill/policy wins.
+Authoritative policy files remain under docs/. When convenience prompts conflict with a Skill or policy document, the Skill/policy wins.
