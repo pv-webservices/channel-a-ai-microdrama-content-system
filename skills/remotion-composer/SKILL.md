@@ -1,9 +1,9 @@
 # Remotion Composer
 
-**Version:** v1.0
+**Version:** v1.1
 
 ## Purpose
-Translate an approved storyboard and approved media/audio assets into a deterministic, frame-accurate Remotion composition for the final short-form video.
+Translate an approved storyboard and approved media/audio assets into a deterministic, frame-accurate Remotion composition.
 
 ## Inputs
 Required:
@@ -22,63 +22,65 @@ Optional:
 Return:
 - Remotion composition plan
 - scene-to-asset map
-- frame ranges for every scene
-- motion treatment per scene
-- transition plan
-- caption timing/placement plan
+- frame ranges
+- executable motion treatment
+- editorial cut intent
+- visual entry-transition behavior when justified
+- caption timing/position/emphasis plan
 - audio cue map
-- required props/data manifest changes
-- reusable component changes only when justified
+- manifest changes
 - render command/path
-- unresolved asset or timing blockers
+- unresolved blockers
 
 ## Responsibilities
-- Convert seconds to exact frame ranges.
-- Preserve approved story order and causal clarity.
-- Choose restrained motion treatment for stills.
-- Sequence video clips without accidental source-audio leakage.
-- Synchronize voice, captions, SFX, ambience and music intent.
-- Keep critical actions clear of captions.
-- Preserve 9:16 mobile hierarchy and safe areas.
-- Reuse motion components instead of inventing one-off effects without reason.
+- Convert seconds to exact frames.
+- Preserve story order and causal clarity.
+- Distinguish `cutIntent` from visual transition effects.
+- Choose restrained executable motion for stills.
+- Use custom motion only with explicit numeric start/end values.
+- Sequence source video muted unless its audio is separately approved.
+- Synchronize voice, captions and sound cues.
+- Keep critical actions clear of captions using explicit caption positions.
+- Preserve 9:16 hierarchy and safe areas.
+- Run manifest validation before rendering.
 
 ## Rules
 - Remotion does not rewrite the story.
-- Do not fabricate missing media; report blockers.
-- Do not change approved scene order silently.
-- A timing change affecting story comprehension must be documented upstream.
+- Do not fabricate missing media or paths.
+- Do not silently change scene order/timing.
+- A match cut is an editorial cut, not permission to add a decorative transition.
+- `fade` is used only when explicitly justified; `cut` is the default entry transition.
 - Motion must serve attention, emotion or comprehension.
-- Hard cuts are preferred over decorative transitions when uncertain.
-- Never add copyrighted music or unapproved media.
-- Generated renders remain outputs, not source-of-truth production documents.
+- Never add copyrighted or unapproved media.
+- Generated renders are outputs, not the editorial source of truth.
 
 ## Quality Criteria
-The composition is traceable to storyboard Scene IDs and source Asset IDs, frame-accurate, mobile-readable, emotionally paced, audio-aware, reproducible and ready for render validation.
+The composition is traceable to storyboard Scene IDs/Asset IDs, frame-accurate, mobile-readable, reproducible, audio-aware and passes repository manifest validation.
 
 ## Failure Modes
-- turning Remotion into a generic effects layer
-- excessive zoom/pan on every still
-- arbitrary transition packs
+- treating cut intent as an effects preset
+- excessive zoom/pan
+- arbitrary fades
 - captions covering faces/hands/key props
-- dialogue/music competition
-- hidden timing drift from storyboard
-- source clip audio accidentally mixed
+- emphasis metadata that is not visible in the render
 - untraceable asset filenames
-- rendering before required assets exist
+- source clip audio leaking into the mix
+- rendering with `assetKind: none` as if it were publish-ready
 
 ## Self-Check
-- [ ] all scenes mapped
+- [ ] all scenes mapped or explicitly marked pending
 - [ ] frame totals match target
-- [ ] every asset is approved and traceable
-- [ ] still motion is restrained
-- [ ] caption safe area checked
+- [ ] production-ready render has no pending visual assets
+- [ ] motion preset is executable
+- [ ] cut intent and visual transition are separated
+- [ ] captions have safe positions and valid emphasis
 - [ ] audio cues are timecoded
-- [ ] first and final frames are intentional
-- [ ] unresolved blockers are explicit
-- [ ] render is handed to Render Validator
+- [ ] first/final frames intentional
+- [ ] `npm run validate:manifests` passes
+- [ ] render handed to Render Validator
 
 ## Examples
-Scene 05: 270 frames at 30fps. Use the approved hand-fold visual sequence. No decorative transition. Keep captions absent during the critical fold. Paper SFX leads the reveal; camera treatment remains a subtle push-in only if the source is a still.
+SC-05: use `cutIntent: cut-on-fold`, `entryTransition: cut`, and a restrained slow push-in only if the source is a still. Place the realization caption at the top because the hands are the critical lower-frame action.
 
 ## Performance Feedback
-Track render-level editing patterns only after multiple comparable videos. Examples include whether denser cuts, caption styles or still-motion treatments correlate with retention. Do not credit Remotion effects for performance when hook/story/asset quality also changed.
+Evaluate editing patterns only after multiple comparable videos. Do not attribute performance to Remotion effects when hook, story or source-asset quality also changed.

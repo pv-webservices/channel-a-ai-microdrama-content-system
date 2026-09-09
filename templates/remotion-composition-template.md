@@ -14,22 +14,29 @@
 | | | | | |
 
 ## Scene timeline
-| Scene ID | Start frame | End frame | Duration | Asset ID | Source type | Motion treatment | Transition | Caption rule | Audio cues |
-|---|---:|---:|---:|---|---|---|---|---|---|
-| | | | | | | | | | |
+| Scene ID | Start frame | End frame | Asset ID | Motion | Cut intent | Entry transition | Caption rule | Audio cues |
+|---|---:|---:|---|---|---|---|---|---|
+| | | | | | | | | |
 
-## Global caption rules
+## Caption map
+| Cue ID | Frames | Text | Emphasis | Position |
+|---|---|---|---|---|
+| | | | | |
 
 ## Audio map
 | Cue ID | Start frame | End frame | Type | Asset/reference | Priority/volume note |
 |---|---:|---:|---|---|---|
 | | | | | | |
 
+## Validation
+- [ ] `npm run validate:manifests`
+- [ ] production-ready visual mapping uses `--require-assets`
+
 ## First-frame treatment
 
 ## Ending treatment
 
-## Reusable Remotion components
+## Reusable components
 
 ## One-off code required
 Prefer none. Explain why if required.

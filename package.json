@@ -1,10 +1,16 @@
 {
   "name": "channel-a-ai-microdrama-content-system",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
+  "engines": {
+    "node": ">=20 <25"
+  },
   "scripts": {
     "studio": "remotion studio remotion/index.ts",
     "typecheck": "tsc --noEmit",
+    "validate:manifests": "node scripts/validate-remotion-manifests.mjs",
+    "remotion:check": "remotion compositions remotion/index.ts --props=remotion/data/VID-0001.json",
+    "validate": "npm run validate:manifests && npm run typecheck && npm run remotion:check",
     "render": "remotion render remotion/index.ts MicroDramaShort renders/microdrama.mp4",
     "render:vid-0001": "remotion render remotion/index.ts MicroDramaShort renders/VID-0001.mp4 --props=remotion/data/VID-0001.json"
   },
