@@ -3,7 +3,7 @@
 **Date:** 2026-09-09  
 **Target duration:** 20–45 seconds  
 **Purpose:** Internal prioritization only — not a virality prediction.  
-**Human selection gate:** REQUIRED before VID-0001 / STORY-0001 is assigned.
+**Human selection gate:** COMPLETE — C02 selected and assigned VID-0001 / STORY-0001.
 
 | ID | Hook | Emotion | Curiosity | Relatability | Originality | Visual | Clarity | Payoff | Shareability | Short-form | Overall | Priority |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
@@ -77,4 +77,4 @@
 **Strongest tension/curiosity option:** C06 — The Empty Carriage.  
 **Strongest pure visual short-form option:** C07 — The Closed Curtain.
 
-No score bypasses the human selection gate.
+Human selection gate completed: C02 — The Flooded Box was explicitly selected.
