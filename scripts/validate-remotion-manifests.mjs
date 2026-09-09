@@ -25,7 +25,13 @@ if (!fs.existsSync(manifestDir)) fail('remotion/data does not exist.');
 
 let files = fs.readdirSync(manifestDir).filter((file) => /^VID-\d{4}\.json$/.test(file)).sort();
 if (requestedVideo) files = files.filter((file) => file === `${requestedVideo}.json`);
-if (files.length === 0) fail(requestedVideo ? `No manifest found for ${requestedVideo}.` : 'No VID-####.json manifests found.');
+
+if (files.length === 0) {
+  if (requestedVideo) fail(`No manifest found for ${requestedVideo}.`);
+  if (requireAssets) fail('No active VID-#### manifests exist to validate with --require-assets.');
+  console.log('No active VID-#### manifests yet. Repository-level manifest validation skipped.');
+  process.exit(0);
+}
 
 for (const file of files) {
   const manifest = JSON.parse(fs.readFileSync(path.join(manifestDir, file), 'utf8'));
