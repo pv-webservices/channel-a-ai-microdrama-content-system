@@ -6,7 +6,7 @@
 **Phase:** E — Remotion Post-production  
 **Stage:** 15 — Remotion Composition & Assembly  
 **Candidate:** 1  
-**Status:** IN PROGRESS — manifest locked; candidate render pending  
+**Status:** COMPLETE — candidate #1 rendered  
 **Target:** 1080×1920, 30fps, 750 frames / 25.0s
 
 ## Edit source of truth
@@ -78,13 +78,35 @@ npm run validate:manifests -- --video=VID-0001 --require-assets
 npm run render:vid-0001
 ```
 
+## Candidate #1 result
+
+Remotion successfully rendered all **750/750 frames**.
+
+Technical probe:
+- codec: H.264
+- dimensions: 1080×1920
+- frame rate: 30 fps
+- audio codec: AAC
+- duration: 25.045333s
+- file size: 20,372,393 bytes
+- MP4 SHA-256: `aa3550a9a82d6ebc2bb82378b4c7cf7fd7b145439be11beaf96e2efd754daef2`
+- artifact archive SHA-256: `f7dc4b19854dd9366fa4b09baae3e888335c4d529c6743fc96d135aa7fdab51b`
+
+Artifact:
+`VID-0001-stage15-candidate-1`
+
 ## Gate
 
-Stage 15 is complete only after:
-- production manifest validates,
-- actual media is materialized,
-- Remotion renders `renders/VID-0001.mp4`,
-- candidate artifact is preserved,
-- basic 1080×1920 / 30fps / ~25s media probe passes.
+- [x] production manifest validates with `--require-assets`
+- [x] actual media materialized
+- [x] deterministic Foley hashes verified
+- [x] TypeScript passes
+- [x] Remotion rendered 750 frames
+- [x] video stream is 1080×1920 / 30fps
+- [x] AAC audio stream exists
+- [x] duration is ~25s
+- [x] candidate artifact preserved
 
-Then proceed to Stage 16 — Render Validation.
+**Stage 15 is COMPLETE.**
+
+Proceed to Stage 16 — Render Validation.
