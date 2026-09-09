@@ -1,11 +1,9 @@
 # Naming Conventions
 
 ## Active production ID reset
-
 The active production namespace was reset on **2026-09-09** at the user's direction.
 
 Active production now starts fresh at:
-
 - Video: VID-0001
 - Story: STORY-0001
 
@@ -36,7 +34,7 @@ Recommended artifacts:
 - characters.md
 - storyboard.md
 - image-prompts.md
-- video-prompts.md
+- remotion-motion-plan.md
 - voiceover.md
 - sound-design.md
 - remotion-plan.md
@@ -45,12 +43,14 @@ Recommended artifacts:
 - qc-report.md
 
 ## Remotion source assets
-Local binary assets are not committed by default. When composing locally, use public/assets/VID-####/ and stable filenames that include or map cleanly to Asset IDs.
+Local binary assets are not committed by default. When composing locally, use `public/assets/VID-####/` and stable filenames that include or map cleanly to Asset IDs.
+
+Active visual source files are images/graphics only. Do not store generated video clips for active production.
 
 Do not use vague final-final-2 filenames as authoritative identifiers. Production documents should reference Asset IDs so a file can be replaced without breaking editorial traceability.
 
 ## Skill names
-Keep skill directory names stable while the Skill document and Git history record versions.
+Keep active Skill directory names stable while the Skill document and Git history record versions. Retired Skill paths should clearly identify themselves as deprecated.
 
 ## Dates
 Prefer ISO YYYY-MM-DD.

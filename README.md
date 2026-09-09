@@ -2,14 +2,14 @@
 
 A production-oriented system for creating original, faceless AI-assisted emotional micro-dramas for YouTube Shorts and Instagram Reels.
 
-The repository separates editorial intelligence from deterministic post-production. Story, characters, prompts and asset generation remain governed by Skills and approval gates; Remotion is the code-based composition and rendering engine.
+The repository separates editorial intelligence, **still-image generation**, and deterministic video construction. Story, characters, image prompts and assets remain governed by Skills and approval gates; **Remotion is the only video-construction and rendering engine for active productions. AI video-generation models are prohibited.**
 
 ## Current stage
-Phase 1 — Manual Validation with Remotion-assisted post-production.
+Phase 1 — Manual Validation with Remotion-based post-production.
 
-**Active production numbering was reset on 2026-09-09. The next selected story is VID-0001 / STORY-0001.** Pre-reset development artifacts are preserved under `archive/pre-reset-2026-09-09/` and do not consume active IDs.
+**Active production numbering was reset on 2026-09-09. The active sequence starts at VID-0001 / STORY-0001.** Pre-reset development artifacts are preserved under `archive/pre-reset-2026-09-09/` and do not consume active IDs.
 
-No autonomous publishing, silent Skill mutation, or end-to-end unattended pipeline is enabled.
+No autonomous publishing, silent Skill mutation, end-to-end unattended pipeline, or AI video-generation workflow is enabled.
 
 ## Canonical end-to-end architecture
 
@@ -28,10 +28,10 @@ No autonomous publishing, silent Skill mutation, or end-to-end unattended pipeli
 8. Character Consistency
 9. Storyboard
 10. Image Prompt Generation
-11. Video Prompt Generation
+11. **Remotion Motion Planning**
 
 ### Phase D — Asset Production
-12. Visual Asset Production
+12. **Visual Asset Production — images/graphics only**
 13. Voiceover Production
 14. Sound Design Production
 
@@ -46,12 +46,15 @@ No autonomous publishing, silent Skill mutation, or end-to-end unattended pipeli
 20. Analytics Capture
 21. Postmortem & Skill Improvement
 
+## Image-only video rule
+Active Channel-A productions may use AI image generation but may not use text-to-video, image-to-video, or any other AI video-generation model.
+
+If one image cannot communicate a required temporal beat, generate additional approved still keyframes. Remotion sequences and animates those images using controlled scale, translation, holds, cuts, captions, layering/parallax where implemented, and audio timing.
+
 ## Remotion ownership
-Remotion becomes authoritative only after approved source assets exist. It owns exact frame timing, image/video placement, restrained still-image motion, explicit visual entry transitions, captions, audio cue placement, first-frame/ending treatment, and final candidate rendering.
+Remotion becomes authoritative after approved image/graphic source assets exist. It owns exact frame timing, image placement, still-image motion, explicit entry transitions, captions, audio cue placement, first-frame/ending treatment, and candidate rendering.
 
-Editorial cut intent is kept separate from visual effects. Values such as `match-cut`, `cut-on-glance`, and `cut-on-fold` describe why/where a cut occurs; `entryTransition` describes executable visual behavior such as `cut` or `fade`.
-
-Generated source-video audio is muted by default. Approved voice/dialogue/SFX/ambience/music cues are mixed separately through the manifest.
+Editorial cut intent is kept separate from visual effects. Values such as `match-cut` or `cut-on-glance` describe why/where a cut occurs; `entryTransition` describes executable visual behavior such as `cut` or `fade`.
 
 ## Standard stage contract
 
@@ -67,43 +70,38 @@ npm ci
 npm run validate
 ```
 
-`npm run validate` performs:
-- active Remotion manifest validation when active manifests exist,
-- strict TypeScript checking,
-- Remotion composition discovery using a neutral system smoke-test manifest.
-
-The neutral smoke manifest is repository infrastructure only and does not consume VID-####.
+`npm run validate` performs active Remotion manifest validation when manifests exist, strict TypeScript checking, and Remotion composition discovery using a neutral system smoke-test manifest.
 
 ## Active video manifests
-A real `remotion/data/VID-####.json` is created when that active video reaches the Remotion handoff. Before a production-ready candidate render:
+A real `remotion/data/VID-####.json` is created when an active video reaches the Remotion handoff. Active production manifests accept image/graphic visual assets only.
+
+Before a production-ready candidate render:
 
 ```bash
 npm run validate:manifests -- --video=VID-0001 --require-assets
 npm run render:vid-0001
 ```
 
-Until VID-0001 is selected and its production manifest is created, the repository intentionally has no active VID manifest.
-
 ## Repository safety
-Pull requests and pushes to `main` run GitHub validation for the locked dependency install, manifests, TypeScript, and Remotion composition discovery. `package-lock.json` is the reproducible dependency source.
+Pull requests and pushes to `main` run GitHub validation for the locked dependency install, manifests, TypeScript, and Remotion composition discovery.
 
 ## Analytics discipline
 Raw performance is stored without invented values. One successful or failed video is not enough to rewrite a Skill. Prefer repeated comparable samples or controlled experiments before changing production rules.
 
 ## Repository map
-- `brand/` — channel strategy, audience, and visual/voice direction
-- `skills/` — stage-specific Skills including Remotion Composer and Render Validator
+- `brand/` — channel strategy, audience, visual and voice direction
+- `skills/` — stage-specific Skills including Remotion Scene Planner, Composer and Render Validator
 - `templates/` — production artifact contracts
 - `prompts/` — reusable prompt starters
 - `production/` — active production artifacts
 - `archive/` — pre-reset historical/reference artifacts only
-- `remotion/` — typed composition engine, smoke validation, and active per-video manifests
+- `remotion/` — typed image-based composition engine, smoke validation, active manifests
 - `scripts/` — repository/manifest validation utilities
 - `workflows/` — canonical production and review procedures
 - `analytics/` — measured performance and validated learnings
 - `experiments/` — controlled testing framework
 - `automation/` — future architecture only
-- `docs/` — compliance, originality, naming, and versioning
+- `docs/` — compliance, originality, naming, versioning and AI-use rules
 
 ## Human approval
 Human approval remains mandatory at concept selection, script approval, and final pre-publish review.
