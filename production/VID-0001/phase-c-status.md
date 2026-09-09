@@ -17,14 +17,14 @@
   - 4 continuity/reference prompts
   - 7 scene keyframe prompts
   - cross-frame validation
-- [x] Stage 11 — Video Prompt Generation
-  - 7 scene motion prompts
-  - start/end states
-  - temporal motion progression
-  - camera/subject/object motion separated
-  - negative motion constraints
-  - transition handoffs
-  - motion-continuity validation
+- [x] Stage 11 — Remotion Motion Planning
+  - 7 scene Remotion motion specifications
+  - scene/frame motion intent
+  - still-image transform progression
+  - executable still-image motion defined
+  - crop/continuity constraints
+  - cut/transition handoffs
+  - Remotion motion validation
 
 ## Phase C status
 
@@ -36,7 +36,7 @@
 - Character authority: `characters.md`
 - Scene/timing/geography authority: `storyboard.md`
 - Still-image prompt authority: `image-prompts.md`
-- Motion prompt authority: `video-prompts.md`
+- Remotion motion authority: `remotion-motion-plan.md`
 
 ## Handoff to Phase D
 
@@ -57,4 +57,4 @@ Use 9:16 for production frames. Use 1K explicitly whenever the selected model ex
 
 Do not use other image models without user approval.
 
-Video-generation provider is not locked by Phase C; Stage 12 may resolve a provider/model based on the approved video prompts and reference-keyframe requirements.
+AI video generation is prohibited. Stage 12 produces image/graphic assets only; all video construction occurs in Remotion.

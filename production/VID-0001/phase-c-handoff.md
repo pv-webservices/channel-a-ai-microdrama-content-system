@@ -17,7 +17,7 @@
 - 25.0-second / 750-frame timing plan
 - 4 reference-image prompts
 - 7 scene keyframe prompts
-- 7 motion/video prompts
+- 7 Remotion motion specifications
 
 ## Phase D entry rule
 
@@ -31,7 +31,7 @@ Visual generation must not silently alter:
 - story payoff
 - approved timing intent
 
-Visual assets should be accepted/rejected against the validation checklists in `image-prompts.md` and `video-prompts.md`.
+Visual assets should be accepted/rejected against the validation checklists in `image-prompts.md` and `remotion-motion-plan.md`.
 
 ## Required next action
 

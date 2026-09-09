@@ -3,7 +3,7 @@
 **Working title:** The Flooded Box  
 **Phase:** D — Asset Production  
 **Stage:** 12 — Visual Asset Production  
-**Status:** IN PROGRESS — still/reference batch generated; motion clips pending  
+**Status:** IN PROGRESS — still/reference batch generated; visual review/final image mapping pending  
 **Date:** 2026-09-09  
 **Magnific project:** VID-0001 — The Flooded Box
 
@@ -74,28 +74,19 @@ Do not mark a still as production-approved until it passes the relevant checklis
 - no generated text/logos,
 - no exaggerated crying/hugging.
 
-## Motion asset planning
+## Video-generation prohibition
 
-Magnific video planning was run against all seven scene keyframes and the locked storyboard.
+A Magnific video plan was briefly evaluated before the project-wide rule was finalized. It is **retired and must not be executed**.
 
-Recommended image-to-video model:
-**Kling 2.1**
+No Kling, image-to-video, text-to-video, or other video-generation model may be used for VID-0001 or future active Channel-A productions.
 
-Planner rationale:
-- strong image-to-video keyframe adherence,
-- realistic human movement,
-- controlled camera behavior.
-
-The planner requires confirmation before paid video generation that:
-1. the seven keyframes map sequentially one-to-one to SC-01 through SC-07;
-2. raw clips should remain silent for external voice/music/SFX mixing in Remotion.
-
-Until those confirmations are recorded, no video-generation credits should be spent.
+The seven scene keyframes are the visual sources. Stage 11 `remotion-motion-plan.md` defines how Remotion animates them. If preview shows that a beat needs more temporal information, generate an additional still image—not a video clip.
 
 ## Stage 12 completion criteria
 
 Stage 12 is complete only when:
 - reference/keyframe stills are visually accepted or corrected,
-- required generated motion clips are produced/accepted or explicitly replaced with approved still + Remotion treatments,
-- every SC-01 through SC-07 has an approved visual source,
+- every SC-01 through SC-07 has an approved image/graphic visual source,
+- any necessary supplemental still keyframes are generated/approved,
+- the Stage-11 Remotion motion plan is accepted for the image set,
 - final visual-source decisions are mapped for Stage 15 Remotion composition.
