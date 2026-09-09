@@ -1,6 +1,24 @@
 export type AssetKind = 'image' | 'video' | 'graphic' | 'none';
-export type MotionPreset = 'static' | 'slow-push-in' | 'slow-pull-out' | 'pan-left' | 'pan-right' | 'reaction-hold' | 'custom';
+export type MotionPreset =
+  | 'static'
+  | 'slow-push-in'
+  | 'slow-pull-out'
+  | 'pan-left'
+  | 'pan-right'
+  | 'reaction-hold'
+  | 'custom';
+export type EntryTransition = 'cut' | 'fade';
+export type CaptionPosition = 'top' | 'middle' | 'bottom';
 export type AudioKind = 'voiceover' | 'dialogue' | 'sfx' | 'ambience' | 'music';
+
+export type CustomMotion = {
+  startScale?: number;
+  endScale?: number;
+  startX?: number;
+  endX?: number;
+  startY?: number;
+  endY?: number;
+};
 
 export type SceneSpec = {
   id: string;
@@ -11,7 +29,10 @@ export type SceneSpec = {
   assetKind: AssetKind;
   assetPath?: string;
   motionPreset: MotionPreset;
-  transition?: string;
+  customMotion?: CustomMotion;
+  cutIntent?: string;
+  entryTransition?: EntryTransition;
+  transitionInFrames?: number;
   captionExclusion?: string;
   notes?: string;
 };
@@ -22,6 +43,7 @@ export type CaptionCue = {
   durationInFrames: number;
   text: string;
   emphasis?: string;
+  position?: CaptionPosition;
 };
 
 export type AudioCue = {

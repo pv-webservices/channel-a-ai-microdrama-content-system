@@ -1,38 +1,28 @@
-# VID-0001 Final Production Status
+# VID-0001 Current Production Status
 
 **Video:** VID-0001 — The Paper Crane
-**Current state:** PROVISIONAL FINAL — PASS WITH CHANGES
-**Runtime:** approximately 38 seconds
-**Format:** 1080x1920, 9:16, 30 fps
+**Canonical state:** REMOTION MIGRATION INCOMPLETE — NOT PUBLISH READY
+**Target runtime:** 38 seconds
+**Target format:** 1080x1920, 9:16, 30 fps
 
-## Completed
-- concept
-- concept scoring
-- hook selection
-- script
-- retention review
-- character continuity
-- storyboard
-- image prompts
-- seven approved keyframes
-- seven scene-by-scene motion clips
-- dialogue / VO timing
-- ambience and Foley
-- restrained original tonal music bed
-- final assembly
-- burned captions
-- separate SRT
-- platform metadata
-- technical QC
-- normalized final export
+## Editorial / pre-production state
+The concept, script, retention review, character plan, storyboard, visual prompts, voice direction and sound-design decisions exist. Historical pre-Remotion production work is archived separately.
 
-## Remaining before publish-ready PASS
-The only material unresolved production item is replacing the temporary local synthetic voice with the connected ElevenLabs provider. ElevenLabs is installed and enabled for the user, but its generation actions are not currently exposed to this chat runtime.
+## Current Remotion state
+- `remotion/data/VID-0001.json` contains the complete 1140-frame scene/caption timing plan.
+- All seven scenes currently use `assetKind: none`; approved binary visual assets are not mapped.
+- `audioCues` is currently empty; approved voice/SFX/ambience/music files are not mapped.
+- Stage 15 Remotion Composition & Assembly is not complete.
+- Stage 16 Render Validation is NOT RUN.
+- Stage 17 Quality Control under the canonical pipeline is NOT RUN.
 
-Generated binary media is intentionally not committed because the repository ignores generated media. The canonical repository remains provider-independent and stores production decisions rather than large binary outputs.
+## Next gate
+1. Restore or regenerate approved source visuals/audio.
+2. Map every approved source to its stable Asset ID and manifest path.
+3. Run `npm run validate:manifests -- --video=VID-0001 --require-assets`.
+4. Render with `npm run render:vid-0001`.
+5. Complete `render-validation.md`.
+6. Only after Render Validation passes, run final editorial QC.
+7. Human final approval remains mandatory before publishing.
 
-## Publication gate
-Do not mark published until:
-1. ElevenLabs voice replacement is completed or the human explicitly accepts the temporary voice.
-2. Audio QC is re-run after any voice replacement.
-3. Human final approval is given.
+Historical pre-Remotion records are retained separately for provenance.

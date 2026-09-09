@@ -15,7 +15,8 @@
       "assetId": "AST-VID0001-SC01",
       "assetKind": "none",
       "motionPreset": "static",
-      "transition": "hard-cut",
+      "cutIntent": "hard-cut",
+      "entryTransition": "cut",
       "captionExclusion": "Keep note and reaching hand unobstructed."
     },
     {
@@ -26,7 +27,8 @@
       "assetId": "AST-VID0001-SC02",
       "assetKind": "none",
       "motionPreset": "slow-push-in",
-      "transition": "cut-on-glance",
+      "cutIntent": "cut-on-glance",
+      "entryTransition": "cut",
       "captionExclusion": "Keep cart notes readable."
     },
     {
@@ -37,7 +39,8 @@
       "assetId": "AST-VID0001-SC03",
       "assetKind": "none",
       "motionPreset": "static",
-      "transition": "match-on-gesture",
+      "cutIntent": "match-on-gesture",
+      "entryTransition": "cut",
       "captionExclusion": "Keep both faces and cart center clear."
     },
     {
@@ -48,7 +51,8 @@
       "assetId": "AST-VID0001-SC04",
       "assetKind": "none",
       "motionPreset": "static",
-      "transition": "match-cut",
+      "cutIntent": "match-cut",
+      "entryTransition": "cut",
       "captionExclusion": "Keep hand gesture and box latch clear."
     },
     {
@@ -59,7 +63,8 @@
       "assetId": "AST-VID0001-SC05",
       "assetKind": "none",
       "motionPreset": "slow-push-in",
-      "transition": "cut-on-fold",
+      "cutIntent": "cut-on-fold",
+      "entryTransition": "cut",
       "captionExclusion": "No caption over the hand-fold interaction."
     },
     {
@@ -70,7 +75,8 @@
       "assetId": "AST-VID0001-SC06",
       "assetKind": "none",
       "motionPreset": "reaction-hold",
-      "transition": "brief-hold",
+      "cutIntent": "brief-hold",
+      "entryTransition": "cut",
       "captionExclusion": "Keep donation card and reaction visible."
     },
     {
@@ -81,7 +87,8 @@
       "assetId": "AST-VID0001-SC07",
       "assetKind": "none",
       "motionPreset": "slow-push-in",
-      "transition": "end-on-crease",
+      "cutIntent": "end-on-crease",
+      "entryTransition": "cut",
       "captionExclusion": "Keep both hands and final crease unobstructed."
     }
   ],
@@ -91,21 +98,24 @@
       "startFrame": 8,
       "durationInFrames": 75,
       "text": "Why are you taking that?",
-      "emphasis": "taking that"
+      "emphasis": "taking that",
+      "position": "bottom"
     },
     {
       "id": "CAP-02",
       "startFrame": 250,
       "durationInFrames": 120,
       "text": "Do you read these?",
-      "emphasis": "read these"
+      "emphasis": "read these",
+      "position": "bottom"
     },
     {
       "id": "CAP-03",
       "startFrame": 630,
       "durationInFrames": 150,
       "text": "He never even turned the words toward himself.",
-      "emphasis": "never even turned"
+      "emphasis": "never even turned",
+      "position": "top"
     }
   ],
   "audioCues": []

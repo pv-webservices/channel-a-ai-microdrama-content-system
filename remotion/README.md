@@ -1,52 +1,51 @@
 # Remotion Post-production Layer
 
-This directory is the deterministic composition and rendering layer for Channel A.
+This directory is the deterministic composition and rendering layer for Channel A. It begins after storyboard/source approval and does not replace writing, character design, generation, final QC or human approval.
 
-Remotion begins after the storyboard and source assets are approved. It does not replace Idea Discovery, writing, retention review, character design, visual generation, voice generation, final QC or human approval.
+## Executable data contract
+Each `remotion/data/VID-####.json` manifest contains dimensions, fps, total frames, scenes, Asset IDs, motion presets, captions and audio cues.
 
-## What Remotion owns
-- frame-accurate scene sequencing
-- image/video placement
-- restrained motion for still images
-- transitions and holds
-- captions and mobile-safe placement
-- voice/dialogue/SFX/ambience/music cue placement
-- first-frame and ending treatment
-- reusable motion components
-- final candidate rendering
+Important distinctions:
+- `cutIntent` — editorial meaning of the cut, e.g. `match-cut`, `cut-on-fold`, `cut-on-glance`.
+- `entryTransition` — executable visual behavior. Currently supported: `cut`, `fade`.
+- `motionPreset` — executable motion. Supported: static, slow push/pull, left/right pan, reaction hold and custom.
+- `caption.position` — executable top/middle/bottom safe placement.
+- `caption.emphasis` — emphasized phrase rendered within the caption.
 
-## Data contract
-Each video should have a remotion/data/VID-####.json manifest containing dimensions, fps, total frames, Scene IDs, Asset IDs, optional source paths, motion presets, captions and audio cues.
+Images and graphics with an `assetPath` render through `Img`; videos render through `OffthreadVideo` and are muted by default. Missing/unmapped assets render a production slate so incomplete media is obvious.
 
-Scene IDs must match the storyboard. Asset IDs must match approved production assets.
+## Validation
 
-Local source files should live under public/assets/VID-####/. Paths in the manifest are relative to public/ unless they are remote HTTP(S) URLs.
+```bash
+npm run validate:manifests
+npm run typecheck
+npm run remotion:check
+```
 
-Generated source-video audio is muted by default in the composition so the approved audio plan remains authoritative.
+For a production-ready visual mapping:
 
-## Missing asset behavior
-If an Asset ID has no assetPath, the composition renders a production slate for that scene instead of pretending a final asset exists. This keeps timing review possible while making missing media obvious.
+```bash
+npm run validate:manifests -- --video=VID-0001 --require-assets
+```
 
-## Setup
-Run:
-- npm install
-- npm run typecheck
-- npm run studio
+## Preview and render
 
-## Candidate render
-VID-0001: npm run render:vid-0001
+```bash
+npm run studio
+npm run render:vid-0001
+```
 
-Candidate outputs belong under renders/ and must pass workflows/render-validation.md before Quality Control.
+Candidate outputs belong under `renders/` and must pass `workflows/render-validation.md` before Quality Control.
+
+## Local source assets
+Place local source files under `public/assets/VID-####/`. Manifest paths are relative to `public/` unless they are HTTP(S) URLs. Binary assets and renders remain ignored by Git.
 
 ## Architecture
-- index.ts — Remotion entry point
-- Root.tsx — composition registry and metadata calculation
-- types.ts — stable per-video composition contract
-- compositions/ — reusable compositions/components
-- data/ — per-video render manifests
+- `index.ts` — Remotion entry point
+- `Root.tsx` — composition registry and metadata calculation
+- `types.ts` — typed manifest contract
+- `compositions/` — reusable components
+- `data/` — per-video manifests
 
 ## Editing principle
-Use Remotion to make approved assets clearer, more precise and more cinematic—not to hide weak storytelling under effects. Hard cuts, holds and silence are valid choices.
-
-## Scalability
-Root.tsx uses calculateMetadata so duration, fps and dimensions can come from per-video props. The same MicroDramaShort composition can therefore support different short durations without duplicating the core composition.
+Use code to make approved assets precise and reproducible, not to hide weak storytelling under effects. Hard cuts, holds and silence remain first-class choices.
