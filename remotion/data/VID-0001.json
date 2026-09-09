@@ -1,0 +1,190 @@
+{
+  "videoId": "VID-0001",
+  "title": "The Flooded Box",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "durationInFrames": 750,
+  "scenes": [
+    {
+      "id": "SC-01",
+      "beat": "Only one can be saved",
+      "startFrame": 0,
+      "durationInFrames": 60,
+      "assetId": "AST-VID0001-SC01",
+      "assetKind": "image",
+      "assetPath": "assets/VID-0001/images/AST-VID0001-SC01.jpg",
+      "motionPreset": "slow-push-in",
+      "cutIntent": "immediate conflict",
+      "entryTransition": "cut",
+      "captionExclusion": "keep console, box and hands visible"
+    },
+    {
+      "id": "SC-02",
+      "beat": "First instinct: save the console",
+      "startFrame": 60,
+      "durationInFrames": 90,
+      "assetId": "AST-VID0001-SC02",
+      "assetKind": "image",
+      "assetPath": "assets/VID-0001/images/AST-VID0001-SC02.jpg",
+      "motionPreset": "custom",
+      "customMotion": {"startScale": 1.01, "endScale": 1.045, "startX": 0, "endX": 12, "startY": 0, "endY": 0},
+      "cutIntent": "cut-on-action",
+      "entryTransition": "cut",
+      "captionExclusion": "console hand and memory box"
+    },
+    {
+      "id": "SC-03",
+      "beat": "The sibling drawing is revealed",
+      "startFrame": 150,
+      "durationInFrames": 90,
+      "assetId": "AST-VID0001-SC03",
+      "assetKind": "image",
+      "assetPath": "assets/VID-0001/images/AST-VID0001-SC03.png",
+      "motionPreset": "custom",
+      "customMotion": {"startScale": 1.02, "endScale": 1.065, "startX": 0, "endX": 0, "startY": 8, "endY": -6},
+      "cutIntent": "match on cardboard-rip sound",
+      "entryTransition": "cut",
+      "captionExclusion": "drawing, hand and box opening"
+    },
+    {
+      "id": "SC-04",
+      "beat": "He understands what the box means",
+      "startFrame": 240,
+      "durationInFrames": 75,
+      "assetId": "AST-VID0001-SC04",
+      "assetKind": "image",
+      "assetPath": "assets/VID-0001/images/AST-VID0001-SC04.jpg",
+      "motionPreset": "reaction-hold",
+      "cutIntent": "eyeline decision",
+      "entryTransition": "cut",
+      "captionExclusion": "eyes, drawing and hand"
+    },
+    {
+      "id": "SC-05",
+      "beat": "He chooses the memory box",
+      "startFrame": 315,
+      "durationInFrames": 120,
+      "assetId": "AST-VID0001-SC05",
+      "assetKind": "image",
+      "assetPath": "assets/VID-0001/images/AST-VID0001-SC05.png",
+      "motionPreset": "custom",
+      "customMotion": {"startScale": 1.01, "endScale": 1.045, "startX": 10, "endX": -10, "startY": 0, "endY": -4},
+      "cutIntent": "movement continuation",
+      "entryTransition": "cut",
+      "captionExclusion": "box, drawing and both hands"
+    },
+    {
+      "id": "SC-06",
+      "beat": "His sister realizes the sacrifice",
+      "startFrame": 435,
+      "durationInFrames": 180,
+      "assetId": "AST-VID0001-SC06",
+      "assetKind": "image",
+      "assetPath": "assets/VID-0001/images/AST-VID0001-SC06.png",
+      "motionPreset": "slow-push-in",
+      "cutIntent": "eyeline payoff",
+      "entryTransition": "cut",
+      "captionExclusion": "faces, box and console sightline"
+    },
+    {
+      "id": "SC-07",
+      "beat": "Silent sibling understanding",
+      "startFrame": 615,
+      "durationInFrames": 135,
+      "assetId": "AST-VID0001-SC07",
+      "assetKind": "image",
+      "assetPath": "assets/VID-0001/images/AST-VID0001-SC07.png",
+      "motionPreset": "slow-push-in",
+      "cutIntent": "end on understanding",
+      "entryTransition": "cut",
+      "captionExclusion": "drawing, hands and faces"
+    }
+  ],
+  "captions": [
+    {
+      "id": "CAP-01",
+      "startFrame": 0,
+      "durationInFrames": 60,
+      "text": "He had time to save only one.",
+      "emphasis": "only one",
+      "position": "top"
+    }
+  ],
+  "audioCues": [
+    {
+      "id": "AUD-01",
+      "kind": "voiceover",
+      "startFrame": 0,
+      "durationInFrames": 60,
+      "path": "assets/VID-0001/audio/AUD-01-voiceover.mp3",
+      "volume": 1
+    },
+    {
+      "id": "AUD-02",
+      "kind": "ambience",
+      "startFrame": 0,
+      "durationInFrames": 750,
+      "path": "assets/VID-0001/audio/AUD-02-water-ambience.wav",
+      "volumeEnvelope": [
+        {"frame": 0, "volume": 0.18},
+        {"frame": 59, "volume": 0.18},
+        {"frame": 75, "volume": 0.28},
+        {"frame": 225, "volume": 0.28},
+        {"frame": 240, "volume": 0.18},
+        {"frame": 300, "volume": 0.18},
+        {"frame": 330, "volume": 0.25},
+        {"frame": 690, "volume": 0.24},
+        {"frame": 749, "volume": 0.18}
+      ]
+    },
+    {
+      "id": "AUD-03",
+      "kind": "sfx",
+      "startFrame": 126,
+      "durationInFrames": 27,
+      "path": "assets/VID-0001/audio/AUD-03-wet-cardboard-rip.wav",
+      "volume": 0.65
+    },
+    {
+      "id": "AUD-04",
+      "kind": "sfx",
+      "startFrame": 188,
+      "durationInFrames": 20,
+      "path": "assets/VID-0001/audio/AUD-04-paper-catch-rustle.wav",
+      "volume": 0.45
+    },
+    {
+      "id": "AUD-06",
+      "kind": "sfx",
+      "startFrame": 315,
+      "durationInFrames": 66,
+      "path": "assets/VID-0001/audio/AUD-06-box-handling.wav",
+      "volume": 0.36
+    },
+    {
+      "id": "AUD-05",
+      "kind": "sfx",
+      "startFrame": 321,
+      "durationInFrames": 114,
+      "path": "assets/VID-0001/audio/AUD-05-wet-footsteps.wav",
+      "volume": 0.4
+    },
+    {
+      "id": "AUD-07",
+      "kind": "music",
+      "startFrame": 240,
+      "durationInFrames": 510,
+      "path": "assets/VID-0001/audio/AUD-07-reverie.mp3",
+      "sourceStartFrame": 240,
+      "volumeEnvelope": [
+        {"frame": 0, "volume": 0.12},
+        {"frame": 75, "volume": 0.15},
+        {"frame": 195, "volume": 0.18},
+        {"frame": 375, "volume": 0.21},
+        {"frame": 489, "volume": 0.16},
+        {"frame": 509, "volume": 0.08}
+      ]
+    }
+  ]
+}
