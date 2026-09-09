@@ -7,33 +7,36 @@
 - [x] Stage 12 — Visual Asset Production
   - [x] 4 continuity/reference images generated
   - [x] 7 scene keyframes generated
-  - [x] all 11 images organized in Magnific project
   - [x] human visual review approved
-  - [x] no supplemental still keyframes required at this gate
-  - [x] final image sources mapped per scene for Remotion
+  - [x] final image sources mapped for Remotion
 - [x] Stage 13 — Voiceover Production
   - [x] AUD-01 generated
-  - [x] ElevenLabs Turbo v2.5
-  - [x] Grayson Kingsley voice
+  - [x] ElevenLabs Turbo v2.5 / Grayson Kingsley
   - [x] exact 2.0-second hook duration
-- [ ] Stage 14 — Sound Design Production
+- [x] Stage 14 — Sound Design Production
+  - [x] AUD-02 water ambience produced
+  - [x] AUD-03 wet cardboard rip produced
+  - [x] AUD-04 paper catch/rustle produced
+  - [x] AUD-05 wet footsteps produced
+  - [x] AUD-06 box handling produced
+  - [x] AUD-07 “Reverie” music bed generated
+  - [x] deterministic cue map/frame ranges locked
+  - [x] Remotion source-offset/ducking requirements documented
 
-## Stage 12 result
-**COMPLETE — Human visual approval passed on 2026-09-09.**
+## Phase D result
 
-## Stage 13 result
-**COMPLETE — AUD-01 generated on 2026-09-09.**
+**COMPLETE**
 
-Narration:
-**“He had time to save only one.”**
+Stage 12 visuals, Stage 13 voiceover, and Stage 14 sound design are ready to hand off to Phase E.
 
-Timing:
-- frame 0 → 59
-- 2.0 seconds at 30 fps
+## Audio notes
 
-No narration occurs after SC-01.
+- AUD-01: 2.0s narrator hook
+- AUD-02–AUD-06: original procedural Foley
+- AUD-07: Magnific / ElevenLabs music generation
+- AUD-07 requested 25s but returned 44s; use source offset ~8s and only the intended segment in Remotion
+- No AI video generation or generated source-video audio is permitted
 
-## Current motion rule
-**No AI video generation is permitted.**
+## Next stage
 
-The approved scene keyframes are animated deterministically in Remotion according to `remotion-motion-plan.md`.
+**Stage 15 — Remotion Composition & Assembly**
