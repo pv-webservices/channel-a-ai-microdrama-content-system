@@ -3,12 +3,11 @@
 **Working title:** The Flooded Box  
 **Phase:** D — Asset Production  
 **Stage:** 12 — Visual Asset Production  
-**Status:** IN PROGRESS — still/reference batch generated; visual review/final image mapping pending  
+**Status:** COMPLETE — human visual approval passed  
 **Date:** 2026-09-09  
 **Magnific project:** VID-0001 — The Flooded Box
 
 ## User-approved image generation policy
-
 Credit-based generation is authorized.
 
 Model priority:
@@ -44,49 +43,38 @@ Reference subtotal: **240 credits**
 Keyframe subtotal: **480 credits**
 
 ## Credit accounting
-
 Magnific credit balance before this Stage 12 image batch: **41,772**  
 Magnific credit balance after this Stage 12 image batch: **41,052**  
-Total Stage 12 image spend so far: **720 credits**
+Total Stage 12 image spend: **720 credits**
 
 ## Storage
-
-All 11 generated image creations were moved into the Magnific project:
+All 11 generated image creations are organized in the Magnific project:
 
 **VID-0001 — The Flooded Box**
 
 The repository stores production IDs/model choices/status, not private Magnific creation identifiers.
 
-## Visual review gate
+## Human visual approval
+Human visual review was completed on 2026-09-09.
 
-The generated images are rendered in Magnific for human review.
+Approved:
+- all 4 continuity/reference images
+- all 7 scene keyframes
+- final image-to-scene mapping
+- Stage-11 Remotion motion plan for this source set
 
-Do not mark a still as production-approved until it passes the relevant checklist in `image-prompts.md`, especially:
-- correct ages and face identities,
-- CHAR-001 watch on left wrist when visible,
-- CHAR-002 dry clothing,
-- console camera-left,
-- memory box camera-right before pickup,
-- stairs rear/right,
-- exact sibling drawing continuity,
-- plausible hands/anatomy,
-- shallow water,
-- no generated text/logos,
-- no exaggerated crying/hugging.
+No supplemental still keyframes are required at this gate.
 
 ## Video-generation prohibition
-
-A Magnific video plan was briefly evaluated before the project-wide rule was finalized. It is **retired and must not be executed**.
-
 No Kling, image-to-video, text-to-video, or other video-generation model may be used for VID-0001 or future active Channel-A productions.
 
-The seven scene keyframes are the visual sources. Stage 11 `remotion-motion-plan.md` defines how Remotion animates them. If preview shows that a beat needs more temporal information, generate an additional still image—not a video clip.
+The seven approved scene keyframes are the visual sources. Stage 11 `remotion-motion-plan.md` defines how Remotion animates them. If a later Remotion preview reveals a missing visual state, the correction path is an additional approved still image—not a video clip.
 
-## Stage 12 completion criteria
+## Stage 12 completion
+- [x] reference/keyframe stills visually accepted
+- [x] every SC-01 through SC-07 has an approved image source
+- [x] no supplemental still keyframe required at approval
+- [x] Stage-11 Remotion motion plan accepted for the image set
+- [x] final visual-source decisions mapped for Stage 15 Remotion composition
 
-Stage 12 is complete only when:
-- reference/keyframe stills are visually accepted or corrected,
-- every SC-01 through SC-07 has an approved image/graphic visual source,
-- any necessary supplemental still keyframes are generated/approved,
-- the Stage-11 Remotion motion plan is accepted for the image set,
-- final visual-source decisions are mapped for Stage 15 Remotion composition.
+**Stage 12 is COMPLETE.**
