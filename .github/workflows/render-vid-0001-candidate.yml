@@ -66,19 +66,25 @@ jobs:
       - name: Render candidate
         run: npm run render:vid-0001
 
+      - name: Install FFmpeg probe tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
       - name: Probe candidate
         shell: bash
         run: |
-          ffprobe -v error -show_entries format=duration -show_entries stream=codec_name,width,height,r_frame_rate -of json renders/VID-0001.mp4 > renders/VID-0001-ffprobe.json
+          ffprobe -v error -show_entries format=duration -show_entries stream=codec_type,codec_name,width,height,r_frame_rate -of json renders/VID-0001.mp4 > renders/VID-0001-ffprobe.json
           python - <<'PY'
           import json
           p=json.load(open('renders/VID-0001-ffprobe.json'))
-          video=next(s for s in p['streams'] if 'width' in s)
+          video=next(s for s in p['streams'] if s.get('codec_type')=='video')
+          audio=next(s for s in p['streams'] if s.get('codec_type')=='audio')
           duration=float(p['format']['duration'])
           assert video['width']==1080 and video['height']==1920, video
           assert video['r_frame_rate']=='30/1', video
           assert 24.9 <= duration <= 25.1, duration
-          print('Candidate probe passed:', video['width'], video['height'], video['r_frame_rate'], duration)
+          print('Candidate probe passed:', video['codec_name'], video['width'], video['height'], video['r_frame_rate'], audio['codec_name'], duration)
           PY
 
       - name: Upload candidate
